@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/javascript/app.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <title>David Garza</title>
+</head>
+<style>
+    header {
+        font-size: 40px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card {
+        /* position: relative; */
+        margin: 1vw 1vh;
+        background-color: gray;
+        height: 300px;
+        width: 300px;
+    }
+
+    .card--width2 {
+        width: 48vw;
+    }
+
+    .main-project-card {
+        position: relative;
+        width: 48%;
+        height: 300px;
+        margin: 1vw 1vh;
+        background-color: gray;
+    }
+
+    .main-project-card:hover {
+        transition: .1s ease-in;
+        opacity: .5;
+    }
+
+    .card-background {
+        /* background-color: gray;
+        height: 25vh;
+        width: 20vw; */
+    }
+
+    .card-title {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 20px;
+    }
+
+    .website-link {
+        padding: 10px;
+        margin: 5px;
+        background-color: white;
+    }
+
+    .website-link:hover {
+        transition: .2s ease-in;
+        color: white;
+        background-color: black;
+    }
+
+    .modal-button {
+        padding: 10px;
+        margin: 5px;
+        background-color: white;
+        border: none;
+    }
+
+    .modal-button:hover {
+        transition: .2s ease-in;
+        color: white;
+        background-color: black;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>David Garza</h1>
+    </header>
+    <nav>
+        <div>Main Projects</div>
+        <div>Side projects</div>
+        <div>Contact information</div>
+    </nav>
+    <main>
+        <section>
+            <p>Hi. I am a multidisplinary and aspiring web developer that would like to offer a proficient skillset to
+                the table.</p>
+        </section>
+        <section>
+            <div class="card-container">
+                <div class="card card--width2">
+                    <img src="" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">Wooden Spoon</h3>
+                        <div class="button-container">
+                            <a class="website-link" href="">Explore Wooden Spoon</a>
+                            <button class="modal-button">Read the Info</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="main-project-card"> -->
+                <div class="card card--width2">
+                    <img src="assets/images/mern_flat.png" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">YelpCamp</h3>
+                        <div class="button-container">
+                            <a class="website-link" href="">Checkout YelpCamp</a>
+                            <button class="modal-button">Takes you to modal</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="main-project-card"> -->
+                <div class="card card--width2">
+                    <img src="assets/images/vag_flat.png" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">VueShare</h3>
+                        <div class="button-container">
+                            <a class="website-link" href="">Vue this website</a>
+                            <button class="modal-button">Takes you to modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>side projects</h1>
+            <br>
+            <div class="card-container">
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">Giftastic</h3>
+                        <div class="button-container">
+                            <a class="website-link" href="">Vue this website</a>
+                            <button class="modal-button">Takes you to modal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/cad-flat.png" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">Crystal Collector</h3>
+                        <div class="button-container">
+                            <a class="website-link" href="">Vue this website</a>
+                            <button class="modal-button">Takes you to modal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">Trivia Pursuit</h3>
+                        <div class="button-container">
+                            <a class="website-link" href="">Vue this website</a>
+                            <button class="modal-button">Takes you to modal</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">All Aboard</h3>
+                        <div class="button-container">
+                            <a class="website-link" href="">Vue this website</a>
+                            <button class="modal-button">Takes you to modal</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">Word Guessing Game</h3>
+                        <div class="button-container">
+                            <a class="website-link" href="">Vue this website</a>
+                            <button class="modal-button">Takes you to modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section></section>
+    </main>
+    <footer>This the footer</footer>
+
+    <script>
+        $('.card-container').masonry({
+            // set itemSelector so .grid-sizer is not used in layout
+            itemSelector: '.card',
+            // itemSelector: '.main-project-card',
+            // use element for option
+            columnWidth: '.card',
+            percentPosition: true,
+            horizontalPosition: true,
+        })
+
+    </script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
