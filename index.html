@@ -31,6 +31,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        height: 0px;
         display: flex;
         flex-direction: column;
     }
@@ -42,11 +43,39 @@
     }
 
     .card {
-        /* position: relative; */
         margin: 1vw 1vh;
         background-color: gray;
-        height: 300px;
-        width: 300px;
+        /* height: 300px; */
+        width: 30vw;
+    }
+
+    .card:hover {
+        transition: .2s ease-in;
+        opacity: .7;
+    }
+
+    .card:hover .button-container {
+        display: flex;
+        position: absolute;
+        transition: .2s ease-in;
+        height: inherit;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    .card:hover .text-container {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10%;
+        overflow: hidden;
+    }
+
+    .card:hover .opacity-background {
+        background-color: black;
+        opacity: .7;
     }
 
     .card--width2 {
@@ -66,17 +95,11 @@
         opacity: .5;
     }
 
-    .card-background {
-        /* background-color: gray;
-        height: 25vh;
-        width: 20vw; */
-    }
-
     .card-title {
         position: absolute;
         top: 15px;
         left: 15px;
-        font-size: 20px;
+        font-size: 3vw;
     }
 
     .website-link {
@@ -122,33 +145,47 @@
         <section>
             <div class="card-container">
                 <div class="card card--width2">
-                    <img src="" alt="">
+                    <img src="https://images.unsplash.com/photo-1557687790-902ede7ab58c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80"
+                        alt="">
                     <div class="card-background">
                         <h3 class="card-title">Wooden Spoon</h3>
                         <div class="button-container">
-                            <a class="website-link" href="">Explore Wooden Spoon</a>
+                            <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
+                                target="_blank">Explore Wooden Spoon</a>
                             <button class="modal-button">Read the Info</button>
                         </div>
                     </div>
                 </div>
                 <!-- <div class="main-project-card"> -->
                 <div class="card card--width2">
-                    <img src="assets/images/mern_flat.png" alt="">
+                    <img src="https://images.unsplash.com/photo-1485809052957-5113b0ff51af?ixlib=rb-1.2.1&auto=format&fit=crop&w=3033&q=80"
+                        alt="">
                     <div class="card-background">
                         <h3 class="card-title">YelpCamp</h3>
+                        <div class="opacity-background">
+                            <div class="text-container">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora enim.
+                                    Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
+                                    similique
+                                    sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
+                            </div>
+                        </div>
                         <div class="button-container">
-                            <a class="website-link" href="">Checkout YelpCamp</a>
+                            <a class="website-link" href="https://whispering-everglades-98644.herokuapp.com/"
+                                target="_blank">Checkout YelpCamp</a>
                             <button class="modal-button">Takes you to modal</button>
                         </div>
                     </div>
                 </div>
                 <!-- <div class="main-project-card"> -->
                 <div class="card card--width2">
-                    <img src="assets/images/vag_flat.png" alt="">
+                    <img src="https://images.unsplash.com/photo-1547679904-ac76451d1594?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                        alt="">
                     <div class="card-background">
                         <h3 class="card-title">VueShare</h3>
                         <div class="button-container">
-                            <a class="website-link" href="">Vue this website</a>
+                            <a class="website-link" href="https://vue-share.dgarza0413.now.sh/" target="_blank">Vue this
+                                website</a>
                             <button class="modal-button">Takes you to modal</button>
                         </div>
                     </div>
@@ -157,52 +194,62 @@
         </section>
         <section>
             <h1>side projects</h1>
+            <p>The list of skills and attributes that come with the portfolio</p>
             <br>
             <div class="card-container">
                 <div class="card">
-                    <img src="" alt="">
+                    <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                        alt="">
                     <div class="card-background">
                         <h3 class="card-title">Giftastic</h3>
                         <div class="button-container">
-                            <a class="website-link" href="">Vue this website</a>
+                            <a class="website-link" href="https://afternoon-chamber-25754.herokuapp.com/"
+                                target="_blank">Visit website</a>
                             <button class="modal-button">Takes you to modal</button>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="assets/images/cad-flat.png" alt="">
+                    <img src="https://images.unsplash.com/photo-1550007436-ba84ff7bcb54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                        alt="">
                     <div class="card-background">
                         <h3 class="card-title">Crystal Collector</h3>
                         <div class="button-container">
-                            <a class="website-link" href="">Vue this website</a>
+                            <a class="website-link" href="https://tranquil-wildwood-80006.herokuapp.com/"
+                                target="_blank">Vue this website</a>
                             <button class="modal-button">Takes you to modal</button>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="" alt="">
+                    <img src="https://images.unsplash.com/photo-1484069560501-87d72b0c3669?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                        alt="">
                     <div class="card-background">
                         <h3 class="card-title">Trivia Pursuit</h3>
                         <div class="button-container">
-                            <a class="website-link" href="">Vue this website</a>
+                            <a class="website-link" href="https://agile-citadel-38649.herokuapp.com/"
+                                target="_blank">Take the Quiz!</a>
                             <button class="modal-button">Takes you to modal</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img src="" alt="">
+                    <img src="https://images.unsplash.com/photo-1532105956626-9569c03602f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80"
+                        alt="">
                     <div class="card-background">
                         <h3 class="card-title">All Aboard</h3>
                         <div class="button-container">
-                            <a class="website-link" href="">Vue this website</a>
+                            <a class="website-link" href="https://boiling-hollows-13980.herokuapp.com/"
+                                target="_blank">Vue this website</a>
                             <button class="modal-button">Takes you to modal</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img src="" alt="">
+                    <img src="https://images.unsplash.com/photo-1513949145697-7a3b42cb9f21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
+                        alt="">
                     <div class="card-background">
                         <h3 class="card-title">Word Guessing Game</h3>
                         <div class="button-container">
