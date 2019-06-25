@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/javascript/app.js">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
     <title>David Garza</title>
@@ -49,10 +50,7 @@
         width: 30vw;
     }
 
-    .card:hover {
-        transition: .2s ease-in;
-        opacity: .7;
-    }
+    .card:hover {}
 
     .card:hover .button-container {
         display: flex;
@@ -64,18 +62,31 @@
 
     }
 
+    .text-container {
+        display: none;
+    }
+
     .card:hover .text-container {
         display: flex;
         position: absolute;
-        bottom: 0;
-        right: 0;
-        margin: 10%;
         overflow: hidden;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
     }
 
     .card:hover .opacity-background {
         background-color: black;
         opacity: .7;
+        height: 50%;
+        width: 50%;
+    }
+
+    .card:hover img {
+        transition: .2s ease-in;
+        filter: brightness(40%);
     }
 
     .card--width2 {
@@ -149,6 +160,15 @@
                         alt="">
                     <div class="card-background">
                         <h3 class="card-title">Wooden Spoon</h3>
+                        <div class="opacity-background">
+                            <div class="text-container">
+                                <p>An all in one application recipe forum that can search receipes and retrieve
+                                    ingredients, steps, and kitchen that will be needed for use within a vast API
+                                    structure </p>
+                                <p>Technologies utilized within this application are javascript/ajax calls and google
+                                    firebase for recipe storage</p>
+                            </div>
+                        </div>
                         <div class="button-container">
                             <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
                                 target="_blank">Explore Wooden Spoon</a>
@@ -168,6 +188,10 @@
                                     Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
                                     similique
                                     sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora enim.
+                                    Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
+                                    similique
+                                    sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
                             </div>
                         </div>
                         <div class="button-container">
@@ -183,6 +207,18 @@
                         alt="">
                     <div class="card-background">
                         <h3 class="card-title">VueShare</h3>
+                        <div class="opacity-background">
+                            <div class="text-container">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora enim.
+                                    Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
+                                    similique
+                                    sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora enim.
+                                    Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
+                                    similique
+                                    sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
+                            </div>
+                        </div>
                         <div class="button-container">
                             <a class="website-link" href="https://vue-share.dgarza0413.now.sh/" target="_blank">Vue this
                                 website</a>
@@ -265,7 +301,7 @@
     <footer>This the footer</footer>
 
     <script>
-        $('.card-container').masonry({
+        var $card = $('.card-container').masonry({
             // set itemSelector so .grid-sizer is not used in layout
             itemSelector: '.card',
             // itemSelector: '.main-project-card',
@@ -275,6 +311,9 @@
             horizontalPosition: true,
         })
 
+        $card.imagesLoaded().progress(function () {
+            $card.masonry('layout');
+        });
     </script>
     <script src="assets/javascript/app.js"></script>
 </body>
