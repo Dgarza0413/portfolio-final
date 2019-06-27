@@ -10,13 +10,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://kit.fontawesome.com/05f187210c.js"></script>
+
 
     <title>David Garza</title>
 </head>
 <style>
-    header {
+    /* header {
+        background-color: gray;
         font-size: 40px;
-    }
+        height: 100vh;
+    } */
 
     nav {
         display: flex;
@@ -28,8 +32,21 @@
         width: 100%;
     }
 
+    h1 {
+        font-size: 50px;
+    }
+
+    h5 {
+        font-size: 22px;
+        margin-bottom: 1vh;
+    }
+
+    .fab {
+        text-align: center;
+    }
+
     .button-container {
-        position: absolute;
+        /* position: absolute; */
         bottom: 0;
         right: 0;
         height: 0px;
@@ -52,7 +69,7 @@
 
     .card:hover .button-container {
         display: flex;
-        position: absolute;
+        /* position: absolute; */
         transition: .2s ease-in;
         height: inherit;
         bottom: 0;
@@ -62,6 +79,7 @@
 
     .text-container {
         display: none;
+        flex-direction: column;
     }
 
     .card:hover .text-container {
@@ -135,19 +153,42 @@
         color: white;
         background-color: black;
     }
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills-desc {
+        text-align: justify;
+    }
+
+    .item-skills {
+        margin: 1vw;
+        width: 20vw;
+        text-align: center;
+    }
+
+    #top {
+        height: 50vh;
+        background: gray;
+    }
 </style>
 
 <body>
-    <header>
-        <h1>David Garza</h1>
-    </header>
+
     <nav>
         <div>Main Projects</div>
         <div>Side projects</div>
         <div>Contact information</div>
     </nav>
     <main>
-        <section>
+        <section id="top">
+            <header>
+                <h1>David Garza</h1>
+            </header>
             <p>Hi. I am a multidisplinary and aspiring web developer that would like to offer a proficient skillset to
                 the table.</p>
         </section>
@@ -159,18 +200,17 @@
                     <div class="card-background">
                         <h3 class="card-title">Wooden Spoon</h3>
                         <div class="opacity-background">
-                            <div class="text-container">
+                            <div class="text-container" style="flex-direction: column">
                                 <p>An all in one application recipe forum that can search receipes and retrieve
                                     ingredients, steps, and kitchen that will be needed for use within a vast API
-                                    structure </p>
-                                <p>Technologies utilized within this application are javascript/ajax calls and google
+                                    structure. Technologies utilized within this application are javascript/ajax calls
+                                    and google
                                     firebase for recipe storage</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
+                                        target="_blank">Explore Wooden Spoon</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="button-container">
-                            <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
-                                target="_blank">Explore Wooden Spoon</a>
-                            <button class="modal-button">Read the Info</button>
                         </div>
                     </div>
                 </div>
@@ -182,21 +222,19 @@
                         <h3 class="card-title">YelpCamp</h3>
                         <div class="opacity-background">
                             <div class="text-container">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora enim.
-                                    Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
-                                    similique
-                                    sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora enim.
-                                    Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
-                                    similique
-                                    sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
+                                <p>Yelpcamp is a campgrounds forum that utilizes a full-stack of mongodb, express, and
+                                    node to control the flow of authentication and campgrounds</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://whispering-everglades-98644.herokuapp.com/"
+                                        target="_blank">Checkout YelpCamp</a>
+                                    <a href=""><i class="fab fa-github fa-4x"></i></a>
+
+                                </div>
+                                <div class="list-icons">
+                                </div>
                             </div>
                         </div>
-                        <div class="button-container">
-                            <a class="website-link" href="https://whispering-everglades-98644.herokuapp.com/"
-                                target="_blank">Checkout YelpCamp</a>
-                            <button class="modal-button">Takes you to modal</button>
-                        </div>
+
                     </div>
                 </div>
                 <!-- <div class="main-project-card"> -->
@@ -211,24 +249,69 @@
                                     Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
                                     similique
                                     sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora enim.
-                                    Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
-                                    similique
-                                    sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://vue-share.dgarza0413.now.sh/"
+                                        target="_blank">Vue this website</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="button-container">
-                            <a class="website-link" href="https://vue-share.dgarza0413.now.sh/" target="_blank">Vue this
-                                website</a>
-                            <button class="modal-button">Takes you to modal</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <section>
             <h1>side projects</h1>
-            <p>The list of skills and attributes that come with the portfolio</p>
+            <p>A list of smaller projects to demonstrate a variety of skills</p>
+            <div class="list">
+                <div class="item-skills">
+                    <i class="fab fa-gripfire fa-4x"></i>
+                    <h5>Firebase</h5>
+                    <p class="skills-desc">Firebase is a google database that can host and call realtime data inputs</p>
+                </div>
+                <div class="item-skills">
+                    <i class="fab fa-envira fa-4x"></i>
+                    <h5>Mongodb</h5>
+                    <p class="skills-desc">Familiarity with mongodb and mongoose applications</p>
+                </div>
+                <div class="item-skills">
+                    <i class="fab fa-js fa-4x"></i>
+                    <h5>Javascript/jquery</h5>
+                    <p class="skills-desc">Understanding of javascript, Object-oriented programming, and ES6 features
+                        for shorter and more powerful code</p>
+                </div>
+                <div class="item-skills">
+                    <i class="fab fa-html5 fa-4x"></i>
+                    <h5>Html</h5>
+                    <p class="skills-desc">Strong understanding of skeleton structures and readability of basic and
+                        intermidate applications</p>
+                </div>
+                <div class="item-skills">
+                    <i class="fab fa-css3-alt fa-4x"></i>
+                    <h5>Css</h5>
+                    <p class="skills-desc">Responsive Css for desktop and mobile applications as well as such
+                        Familiarity with frameworks like sass</p>
+                </div>
+                <div class="item-skills">
+                    <i class="fas fa-stream fa-4x"></i>
+                    <h5>Express</h5>
+                    <p class="skills-desc">Description of skill</p>
+                </div>
+                <div class="item-skills">
+                    <i class="fas fa-cogs fa-4x"></i>
+                    <h5>API</h5>
+                    <p class="skills-desc">Description of skill</p>
+                </div>
+                <div class="item-skills">
+                    <i class="fab fa-node-js fa-4x"></i>
+                    <h5>Node</h5>
+                    <p class="skills-desc">Understanding of the javascript based frameworks such as node js</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
             <br>
             <div class="card-container">
                 <div class="card">
@@ -236,10 +319,18 @@
                         alt="">
                     <div class="card-background">
                         <h3 class="card-title">Giftastic</h3>
-                        <div class="button-container">
-                            <a class="website-link" href="https://afternoon-chamber-25754.herokuapp.com/"
-                                target="_blank">Visit website</a>
-                            <button class="modal-button">Takes you to modal</button>
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p>An all in one application recipe forum that can search receipes and retrieve
+                                    ingredients, steps, and kitchen that will be needed for use within a vast API
+                                    structure. Technologies utilized within this application are javascript/ajax calls
+                                    and google
+                                    firebase for recipe storage</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://afternoon-chamber-25754.herokuapp.com/"
+                                        target="_blank">Look at Giftastic</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -248,10 +339,18 @@
                         alt="">
                     <div class="card-background">
                         <h3 class="card-title">Crystal Collector</h3>
-                        <div class="button-container">
-                            <a class="website-link" href="https://tranquil-wildwood-80006.herokuapp.com/"
-                                target="_blank">Vue this website</a>
-                            <button class="modal-button">Takes you to modal</button>
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p>An all in one application recipe forum that can search receipes and retrieve
+                                    ingredients, steps, and kitchen that will be needed for use within a vast API
+                                    structure. Technologies utilized within this application are javascript/ajax calls
+                                    and google
+                                    firebase for recipe storage</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
+                                        target="_blank">Explore Wooden Spoon</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -260,10 +359,18 @@
                         alt="">
                     <div class="card-background">
                         <h3 class="card-title">Trivia Pursuit</h3>
-                        <div class="button-container">
-                            <a class="website-link" href="https://agile-citadel-38649.herokuapp.com/"
-                                target="_blank">Take the Quiz!</a>
-                            <button class="modal-button">Takes you to modal</button>
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p>An all in one application recipe forum that can search receipes and retrieve
+                                    ingredients, steps, and kitchen that will be needed for use within a vast API
+                                    structure. Technologies utilized within this application are javascript/ajax calls
+                                    and google
+                                    firebase for recipe storage</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://agile-citadel-38649.herokuapp.com/"
+                                        target="_blank">Take the Trivia Quiz</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -273,10 +380,18 @@
                         alt="">
                     <div class="card-background">
                         <h3 class="card-title">All Aboard</h3>
-                        <div class="button-container">
-                            <a class="website-link" href="https://boiling-hollows-13980.herokuapp.com/"
-                                target="_blank">Vue this website</a>
-                            <button class="modal-button">Takes you to modal</button>
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p>An all in one application recipe forum that can search receipes and retrieve
+                                    ingredients, steps, and kitchen that will be needed for use within a vast API
+                                    structure. Technologies utilized within this application are javascript/ajax calls
+                                    and google
+                                    firebase for recipe storage</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://boiling-hollows-13980.herokuapp.com/"
+                                        target="_blank">Explore Wooden Spoon</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -286,9 +401,18 @@
                         alt="">
                     <div class="card-background">
                         <h3 class="card-title">Word Guessing Game</h3>
-                        <div class="button-container">
-                            <a class="website-link" href="">Vue this website</a>
-                            <button class="modal-button">Takes you to modal</button>
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p>An all in one application recipe forum that can search receipes and retrieve
+                                    ingredients, steps, and kitchen that will be needed for use within a vast API
+                                    structure. Technologies utilized within this application are javascript/ajax calls
+                                    and google
+                                    firebase for recipe storage</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
+                                        target="_blank">Explore Wooden Spoon</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -298,15 +422,21 @@
                         alt="">
                     <div class="card-background">
                         <h3 class="card-title">liri</h3>
-                        <div class="button-container">
-                            <a class="website-link"
-                                href="https://drive.google.com/file/d/16DyM-CzdWtvI3yC0jHLL8RQi6jYihhgB/view?usp=sharing">Vue
-                                this website</a>
-                            <button class="modal-button">Takes you to modal</button>
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p>An all in one application recipe forum that can search receipes and retrieve
+                                    ingredients, steps, and kitchen that will be needed for use within a vast API
+                                    structure. Technologies utilized within this application are javascript/ajax calls
+                                    and google
+                                    firebase for recipe storage</p>
+                                <div class="button-container">
+                                    <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
+                                        target="_blank">Explore Wooden Spoon</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         <section></section>
