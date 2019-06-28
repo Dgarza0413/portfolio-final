@@ -23,6 +23,7 @@
     } */
 
     nav {
+        position: sticky;
         display: flex;
         flex-direction: row;
         justify-content: right;
@@ -80,6 +81,7 @@
     .text-container {
         display: none;
         flex-direction: column;
+        overflow: hidden;
     }
 
     .card:hover .text-container {
@@ -178,7 +180,6 @@
 </style>
 
 <body>
-
     <nav>
         <div>Main Projects</div>
         <div>Side projects</div>
@@ -223,12 +224,12 @@
                         <div class="opacity-background">
                             <div class="text-container">
                                 <p>Yelpcamp is a campgrounds forum that utilizes a full-stack of mongodb, express, and
-                                    node to control the flow of authentication and campgrounds</p>
+                                    node to control the flow of authentication of users and campgrounds that users can
+                                    post and manage</p>
                                 <div class="button-container">
                                     <a class="website-link" href="https://whispering-everglades-98644.herokuapp.com/"
                                         target="_blank">Checkout YelpCamp</a>
-                                    <a href=""><i class="fab fa-github fa-4x"></i></a>
-
+                                    <a href="">Github is availble<i class="fab fa-github fa-4x"></i></a>
                                 </div>
                                 <div class="list-icons">
                                 </div>
@@ -245,10 +246,9 @@
                         <h3 class="card-title">VueShare</h3>
                         <div class="opacity-background">
                             <div class="text-container">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora enim.
-                                    Voluptatum, architecto quidem veritatis cupiditate ullam eos sint eaque vel
-                                    similique
-                                    sequi perferendis, a voluptatibus facilis sunt voluptatem quibusdam?</p>
+                                <p>A photography sharing forum app that applies use of apollo server 2 and apollo boast,
+                                    writing queries with graphql language and client and server side and using vue and
+                                    vuex for functionality </p>
                                 <div class="button-container">
                                     <a class="website-link" href="https://vue-share.dgarza0413.now.sh/"
                                         target="_blank">Vue this website</a>
