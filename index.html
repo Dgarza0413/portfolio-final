@@ -16,11 +16,9 @@
     <title>David Garza</title>
 </head>
 <style>
-    /* header {
-        background-color: gray;
-        font-size: 40px;
-        height: 100vh;
-    } */
+    html {
+        scroll-behavior: smooth;
+    }
 
     nav {
         position: sticky;
@@ -31,6 +29,10 @@
 
     img {
         width: 100%;
+        height: 50vh;
+        box-sizing: border-box;
+        object-fit: cover;
+        padding: 5%;
     }
 
     h1 {
@@ -59,13 +61,15 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .card {
-        margin: 1vw 1vh;
+        /* margin: 1vw 1vh; */
         background-color: gray;
         /* height: 300px; */
-        width: 30vw;
+        width: 33.33vw;
+        position: relative;
     }
 
     .card:hover .button-container {
@@ -108,7 +112,8 @@
     }
 
     .card--width2 {
-        width: 48vw;
+        width: 50vw;
+        position: relative;
     }
 
     .main-project-card {
@@ -173,33 +178,84 @@
         text-align: center;
     }
 
-    #top {
+    #home {
         height: 50vh;
         background: gray;
+    }
+
+
+    /* navbar */
+    li {
+        float: right;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        right: 3.5%;
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    /* p {
+        margin: 0;
+        line-height: 1.8;
+        text-align: justify;
+        font-size: 3vh;
+    } */
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 600;
     }
 </style>
 
 <body>
-    <nav>
-        <div>Main Projects</div>
-        <div>Side projects</div>
-        <div>Contact information</div>
-    </nav>
+    <div class="topnav" id="navbar">
+        <ul>
+            <li><a onclick="scrollSection('home')">Home</a></li>
+            <li><a onclick="scrollSection('contactMe')">Contact Me</a></li>
+            <li><a onclick="scrollSection('apps')">Apps</a></li>
+            <li><a onclick="scrollSection('skills')">Skills</a></li>
+            <li><a onclick="scrollSection('main-content')">Projects</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i></a></li>
+        </ul>
+    </div>
     <main>
-        <section id="top">
-            <header>
+        <section id="home">
+            <div class="flex-box">
                 <h1>David Garza</h1>
-            </header>
+            </div>
+
             <p>Hi. I am a multidisplinary and aspiring web developer that would like to offer a proficient skillset to
                 the table.</p>
         </section>
-        <section>
+        <section id="main-content">
             <div class="card-container">
-                <div class="card card--width2">
-                    <img src="https://images.unsplash.com/photo-1557687790-902ede7ab58c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80"
-                        alt="">
+                <div class="card card--width2" style="background-color: #0A2463">
+                    <img src="./assets/images/wooden-spoon-screen.png" alt="">
                     <div class="card-background">
-                        <h3 class="card-title">Wooden Spoon</h3>
+                        <!-- <h3 class="card-title">Wooden Spoon</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>An all in one application recipe forum that can search receipes and retrieve
@@ -215,8 +271,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="main-project-card"> -->
-                <div class="card card--width2">
+                <div class="card card--width2" style="background-color: #247BA0">
                     <img src="https://images.unsplash.com/photo-1485809052957-5113b0ff51af?ixlib=rb-1.2.1&auto=format&fit=crop&w=3033&q=80"
                         alt="">
                     <div class="card-background">
@@ -235,11 +290,9 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <!-- <div class="main-project-card"> -->
-                <div class="card card--width2">
+                <div class="card card--width2" style="background-color: #E2E2E2">
                     <img src="https://images.unsplash.com/photo-1547679904-ac76451d1594?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
                         alt="">
                     <div class="card-background">
@@ -260,19 +313,26 @@
             </div>
         </section>
 
-        <section>
-            <h1>side projects</h1>
+        <section id="skills" style="background-color: #8C9A9E">
+            <h1>skills</h1>
             <p>A list of smaller projects to demonstrate a variety of skills</p>
             <div class="list">
                 <div class="item-skills">
                     <i class="fab fa-gripfire fa-4x"></i>
                     <h5>Firebase</h5>
-                    <p class="skills-desc">A google database that can host and call realtime data inputs</p>
+                    <p class="skills-desc">A google <span>database</span> that can host and call realtime data inputs
+                    </p>
                 </div>
                 <div class="item-skills">
                     <i class="fab fa-envira fa-4x"></i>
                     <h5>Mongodb</h5>
-                    <p class="skills-desc">Familiarity with mongodb and mongoose applications</p>
+                    <p class="skills-desc">Familiarity with mongodb and mongoose applications look at my
+                        <span>yelpcamp</span> and <span>vueshare</span> for reference</p>
+                </div>
+                <div class="item-skills">
+                    <i class="fas fa-database fa-4x"></i>
+                    <h5>mySQL</h5>
+                    <p class="skills-desc">Knowledge and proficient with mySQL check out my Bamazon for reference</p>
                 </div>
                 <div class="item-skills">
                     <i class="fab fa-js fa-4x"></i>
@@ -295,11 +355,11 @@
                 <div class="item-skills">
                     <i class="fas fa-stream fa-4x"></i>
                     <h5>Express</h5>
-                    <p class="skills-desc">Description of skill</p>
+                    <p class="skills-desc">Routing </p>
                 </div>
                 <div class="item-skills">
                     <i class="fas fa-cogs fa-4x"></i>
-                    <h5>API</h5>
+                    <h5>API RESTful</h5>
                     <p class="skills-desc">Description of skill</p>
                 </div>
                 <div class="item-skills">
@@ -311,33 +371,33 @@
         </section>
 
 
-        <section>
-            <br>
+        <section id="apps">
             <div class="card-container">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-                        alt="">
-                    <div class="card-background">
-                        <h3 class="card-title">Giftastic</h3>
-                        <div class="opacity-background">
-                            <div class="text-container" style="flex-direction: column">
-                                <p>This app makes use of the <span>GIPHY API</span> and <span>ajax</span> calls to make
-                                    a dynamic web page that populates with
-                                    gifs of your choice
-                                </p>
-                                <div class="button-container">
-                                    <a class="website-link" href="https://afternoon-chamber-25754.herokuapp.com/"
-                                        target="_blank">Look at Giftastic</a>
+                <div class="box">
+                    <div class="card" style="background-color: #337CA0">
+                        <img src="assets/images/giftastic-screen.png" alt="">
+                        <div class="card-background">
+                            <!-- <h3 class="card-title">Giftastic</h3> -->
+                            <div class="opacity-background">
+                                <div class="text-container" style="flex-direction: column">
+                                    <p>This app makes use of the <span>GIPHY API</span> and <span>ajax</span> calls to
+                                        make
+                                        a dynamic web page that populates with
+                                        gifs of your choice
+                                    </p>
+                                    <div class="button-container">
+                                        <a class="website-link" href="https://afternoon-chamber-25754.herokuapp.com/"
+                                            target="_blank">Look at Giftastic</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1550007436-ba84ff7bcb54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-                        alt="">
+                <div class="card" style="background-color: #3EC300">
+                    <img src="assets/images/crystal-collector-screeshot.png" alt="">
                     <div class="card-background">
-                        <h3 class="card-title">Crystal Collector</h3>
+                        <!-- <h3 class="card-title">Crystal Collector</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>Using <span>jquery</span> and <span>html</span> dom updates we have a player guess
@@ -352,11 +412,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1484069560501-87d72b0c3669?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-                        alt="">
+                <div class="card" style="background-color: #E13700">
+                    <img src="./assets/images/science-trivia-screen.png" alt="">
                     <div class="card-background">
-                        <h3 class="card-title">Trivia Pursuit</h3>
+                        <!-- <h3 class="card-title">Trivia Pursuit</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>Using <span>Javascript</span> for the logic and <span>jQuery</span> to manipulate
@@ -371,11 +430,10 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1532105956626-9569c03602f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80"
-                        alt="">
+                <div class="card" style="background-color: #FFFC31">
+                    <img src="./assets/images/all-board-screen.png" alt="">
                     <div class="card-background">
-                        <h3 class="card-title">All Aboard</h3>
+                        <!-- <h3 class="card-title">All Aboard</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>A train scheduler that incorporates <span>firebase</span> to display arrival and
@@ -392,7 +450,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" style="background-color: #4B3B47">
                     <img src="https://images.unsplash.com/photo-1513949145697-7a3b42cb9f21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
                         alt="">
                     <div class="card-background">
@@ -413,7 +471,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" style="background-color: #CFD2B2">
                     <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2158&q=80"
                         alt="">
                     <div class="card-background">
@@ -432,7 +490,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" style="background-color: #E0D8DE">
                     <img src="https://images.unsplash.com/photo-1533055640609-24b498dfd74c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80"
                         alt="">
                     <div class="card-background">
@@ -450,13 +508,47 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card" style="background-color: #E0D8DE">
+                    <img src="https://images.unsplash.com/photo-1533055640609-24b498dfd74c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80"
+                        alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">Friend Finder</h3>
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p></p>
+                                <div class="button-container">
+                                    <a class="website-link" href="" target="_blank">Find a friend</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section></section>
     </main>
     <footer>This the footer</footer>
 
-    <script>
+    <script>window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("navbar");
+        var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) / 2;
+
+        function myFunction() {
+            if (window.pageYOffset > h) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        function scrollSection(scroll) {
+            var navItem = document.getElementById(scroll)
+            navItem.scrollIntoView();
+        }</script>
+
+    <!-- <script>
         var $card = $('.card-container').masonry({
             // set itemSelector so .grid-sizer is not used in layout
             itemSelector: '.card',
@@ -470,7 +562,7 @@
         $card.imagesLoaded().progress(function () {
             $card.masonry('layout');
         });
-    </script>
+    </script> -->
     <script src="assets/javascript/app.js"></script>
 </body>
 
