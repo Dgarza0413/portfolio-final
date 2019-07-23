@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/javascript/app.js">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
@@ -32,19 +33,27 @@
     <main>
         <section id="home">
             <div class="flex-box">
-                <h1>David Garza</h1>
-                <img src="./assets/images/computer-flat.png" alt="">
-                <p>Hi. I am a multidisplinary and aspiring web developer that would like to offer a proficient skillset
-                    to
-                    the table.</p>
+                <div class="flex-row">
+                    <div class="flex-column">
+                        <h1>David Garza</h1>
+                    </div>
+                    <div class="flex-column">
+                        <p>Hi. I am a multidisplinary and aspiring web developer that would like to offer a proficient
+                            skillset
+                            to
+                            the table.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="main-content">
+            <div class="section-title">
+                <h1>Main Projects</h1>
+            </div>
             <div class="card-container">
                 <div class="card card--width2">
-                    <img src="./assets/images/wooden-spoon-screen.png" alt="">
+                    <img src="./assets/images/mockup-wooden-spoon.png" alt="">
                     <div class="card-background">
-                        <!-- <h3 class="card-title">Wooden Spoon</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>An all in one application recipe forum that can search receipes and retrieve
@@ -53,10 +62,11 @@
                                     and google
                                     firebase for recipe storage</p>
                                 <div class="button-container">
-                                    <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
-                                        target="_blank">Explore Wooden Spoon</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/wooden-spoon"
-                                        target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                    <a href="https://still-stream-54250.herokuapp.com/" target="_blank">Explore Wooden
+                                        Spoon</a>
+                                    <a href="https://github.com/Dgarza0413/wooden-spoon" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
+
                                 </div>
                             </div>
                         </div>
@@ -66,17 +76,15 @@
                     <img src="https://images.unsplash.com/photo-1485809052957-5113b0ff51af?ixlib=rb-1.2.1&auto=format&fit=crop&w=3033&q=80"
                         alt="">
                     <div class="card-background">
-                        <!-- <h3 class="card-title">YelpCamp</h3> -->
                         <div class="opacity-background">
                             <div class="text-container">
                                 <p>Yelpcamp is a campgrounds forum that utilizes a full-stack of mongodb, express, and
                                     node to control the flow of authentication of users and campgrounds that users can
                                     post and manage</p>
                                 <div class="button-container">
-                                    <a class="website-link" href="https://whispering-everglades-98644.herokuapp.com/"
+                                    <a href="https://whispering-everglades-98644.herokuapp.com/"
                                         target="_blank">Checkout YelpCamp</a>
-                                    <a class="website-link" href="" target="_blank"><i
-                                            class="fab fa-github fa-2x"></i></a>
+                                    <a href="" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                                 </div>
                                 <div class="list-icons">
                                 </div>
@@ -88,37 +96,30 @@
                     <img src="https://images.unsplash.com/photo-1547679904-ac76451d1594?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
                         alt="">
                     <div class="card-background">
-                        <!-- <h3 class="card-title">VueShare</h3> -->
                         <div class="opacity-background">
                             <div class="text-container">
                                 <p>A photography sharing forum app that applies use of apollo server 2 and apollo boast,
                                     writing queries with graphql language and client and server side and using vue and
                                     vuex for functionality </p>
                                 <div class="button-container">
-                                    <a class="website-link" href="https://vue-share.dgarza0413.now.sh/"
-                                        target="_blank">Vue this website</a>
-                                    <a class="website-link" href="" target="_blank"><i
-                                            class="fab fa-github fa-2x"></i></a>
+                                    <a href="https://vue-share.dgarza0413.now.sh/" target="_blank">Vue this website</a>
+                                    <a href="" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card card--width2">
-                    <img src="https://images.unsplash.com/photo-1547679904-ac76451d1594?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                        alt="">
+                    <img src="./assets/images/mockup-heroesunited.png" alt="">
                     <div class="card-background">
-                        <!-- <h3 class="card-title">VueShare</h3> -->
                         <div class="opacity-background">
                             <div class="text-container">
-                                <p>A photography sharing forum app that applies use of apollo server 2 and apollo boast,
-                                    writing queries with graphql language and client and server side and using vue and
-                                    vuex for functionality </p>
+                                <p>A SQL, Express, and Javascript stack application Heroes United is a turn based game
+                                    vs AI that is complete with user login and character customization </p>
                                 <div class="button-container">
-                                    <a class="website-link" href="https://vue-share.dgarza0413.now.sh/"
-                                        target="_blank">Vue this website</a>
-                                    <a class="website-link" href="" target="_blank"><i
-                                            class="fab fa-github fa-2x"></i></a>
+                                    <a href="https://vue-share.dgarza0413.now.sh/" target="_blank">Play Heroes
+                                        United</a>
+                                    <a href="" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -127,9 +128,10 @@
             </div>
         </section>
 
-        <section id="skills" style="background-color: #8C9A9E">
-            <h1>skills</h1>
-            <p>A list of smaller projects to demonstrate a variety of skills</p>
+        <section id="skills">
+            <div class="section-title">
+                <h1>Skills</h1>
+            </div>
             <div class="list">
                 <div class="item-skills">
                     <i class="fab fa-gripfire fa-4x"></i>
@@ -173,13 +175,9 @@
                 <div class="item-skills">
                     <i class="fas fa-stream fa-4x"></i>
                     <h5>Express</h5>
-                    <p class="skills-desc">Experience with express library and routing, look into the <span>friend
-                            finder</span> app for examples</p>
-                </div>
-                <div class="item-skills">
-                    <i class="fas fa-cogs fa-4x"></i>
-                    <h5>API RESTful</h5>
-                    <p class="skills-desc">Description of skill</p>
+                    <p class="skills-desc">Experience with express library and restful routing (GET, POST, PUT, DELETE),
+                        look into the <span>friend
+                            finder</span> as well as <span>heroes united</span> app for examples</p>
                 </div>
                 <div class="item-skills">
                     <i class="fab fa-node-js fa-4x"></i>
@@ -187,11 +185,20 @@
                     <p class="skills-desc">Understanding of the node environment and its cross platform behaviors my
                         <span>liri</span>, <span>bamazon</span> explore this</p>
                 </div>
+                <div class="item-skills">
+                    <i class="fab fa-git-alt fa-4x"></i>
+                    <h5>Git</h5>
+                    <p class="skills-desc">using of team workflows using git look at <span>Heroes United</span> and
+                        <span>Wooden Spoon</span> for examples</p>
+                </div>
             </div>
         </section>
 
 
         <section id="apps">
+            <div class="section-title">
+                <h1>Apps</h1>
+            </div>
             <div class="card-container">
                 <div class="box">
                     <div class="card">
@@ -205,10 +212,10 @@
                                         gifs of your choice
                                     </p>
                                     <div class="button-container">
-                                        <a class="website-link" href="https://afternoon-chamber-25754.herokuapp.com/"
-                                            target="_blank">Look at Giftastic</a>
-                                        <a class="website-link" href="https://github.com/Dgarza0413/giftastic"
-                                            target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                        <a href="https://afternoon-chamber-25754.herokuapp.com/" target="_blank">Look at
+                                            Giftastic</a>
+                                        <a href="https://github.com/Dgarza0413/giftastic" target="_blank"><i
+                                                class="fab fa-github fa-2x"></i></a>
 
                                     </div>
                                 </div>
@@ -219,7 +226,6 @@
                 <div class="card">
                     <img src="assets/images/crystal-collector-screeshot.png" alt="">
                     <div class="card-background">
-                        <!-- <h3 class="card-title">Crystal Collector</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>Using <span>jquery</span> and <span>html</span> dom updates we have a player guess
@@ -227,10 +233,10 @@
                                     a randomized number represented by a crystal. Add the numbers up to reach the answer
                                     exactly</p>
                                 <div class="button-container">
-                                    <a class="website-link" href="https://tranquil-wildwood-80006.herokuapp.com/"
-                                        target="_blank">Play Crystal Collector</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/crystal-collector"
-                                        target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                    <a href="https://tranquil-wildwood-80006.herokuapp.com/" target="_blank">Play
+                                        Crystal Collector</a>
+                                    <a href="https://github.com/Dgarza0413/crystal-collector" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -239,17 +245,16 @@
                 <div class="card">
                     <img src="./assets/images/science-trivia-screen.png" alt="">
                     <div class="card-background">
-                        <!-- <h3 class="card-title">Trivia Pursuit</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>Using <span>Javascript</span> for the logic and <span>jQuery</span> to manipulate
                                     <span>HTML</span> and <span>setTimers</span>, this
                                     project is science trivia where you answer against the clock for more points</p>
                                 <div class="button-container">
-                                    <a class="website-link" href="https://agile-citadel-38649.herokuapp.com/"
-                                        target="_blank">Take the Trivia Quiz</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/trivia-pursuit"
-                                        target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                    <a href="https://agile-citadel-38649.herokuapp.com/" target="_blank">Take the Trivia
+                                        Quiz</a>
+                                    <a href="https://github.com/Dgarza0413/trivia-pursuit" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -267,10 +272,10 @@
                                     display of them
                                 </p>
                                 <div class="button-container">
-                                    <a class="website-link" href="https://boiling-hollows-13980.herokuapp.com/"
-                                        target="_blank">Track your Train</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/trivia-pursuit"
-                                        target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                    <a href="https://boiling-hollows-13980.herokuapp.com/" target="_blank">Track your
+                                        Train</a>
+                                    <a href="https://github.com/Dgarza0413/trivia-pursuit" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +286,6 @@
                     <img src="https://images.unsplash.com/photo-1513949145697-7a3b42cb9f21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
                         alt="">
                     <div class="card-background">
-                        <!-- <h3 class="card-title">Word Guessing Game</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>ran in the browser, this word guess game features dynamically updated
@@ -290,21 +294,18 @@
                                     onkey methods.
                                 </p>
                                 <div class="button-container">
-                                    <a class="website-link" href="https://still-stream-54250.herokuapp.com/"
-                                        target="_blank">Word Guessing Game</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/word-guess-game"
-                                        target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                    <a href="https://still-stream-54250.herokuapp.com/" target="_blank">Word Guessing
+                                        Game</a>
+                                    <a href="https://github.com/Dgarza0413/word-guess-game" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2158&q=80"
-                        alt="">
+                    <img src="./assets/images/liri.png" alt="">
                     <div class="card-background">
-                        <!-- <h3 class="card-title">liri</h3> -->
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>Having no website of its own. This project uses backend tech <span>node</span> to
@@ -313,8 +314,8 @@
                                     displaying
                                     onto the terminal</p>
                                 <div class="button-container">
-                                    <a class="website-link" href="" target="_blank">Check Out the video</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/liri" target="_blank"><i
+                                    <a href="" target="_blank">Check Out the video</a>
+                                    <a href="https://github.com/Dgarza0413/liri" target="_blank"><i
                                             class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
@@ -322,10 +323,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1533055640609-24b498dfd74c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80"
-                        alt="">
+                    <img src="./assets/images/bamazonCustomer.png" alt="">
                     <div class="card-background">
-                        <h3 class="card-title">bamazon</h3>
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>An example of having no website of its own. This project uses backend tech
@@ -333,9 +332,9 @@
                                     pass in information into the CLI and call and request data from <span>mysql</span>
                                 </p>
                                 <div class="button-container">
-                                    <a class="website-link" href="" target="_blank">Check Out the video</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/bamazon"
-                                        target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                    <a href="" target="_blank">Check Out the video</a>
+                                    <a href="https://github.com/Dgarza0413/bamazon" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -353,9 +352,9 @@
                                     matched person that share calculated scores
                                 </p>
                                 <div class="button-container">
-                                    <a class="website-link" href="" target="_blank">Find a friend</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/friend-finder"
-                                        target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                    <a href="" target="_blank">Find a friend</a>
+                                    <a href="https://github.com/Dgarza0413/friend-finder" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -373,9 +372,9 @@
                                     remove and add tasks onto our webpage.
                                 </p>
                                 <div class="button-container">
-                                    <a class="website-link" href="" target="_blank">Track your task</a>
-                                    <a class="website-link" href="https://github.com/Dgarza0413/reminder-tracker"
-                                        target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                    <a href="" target="_blank">Track your task</a>
+                                    <a href="https://github.com/Dgarza0413/reminder-tracker" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -404,22 +403,6 @@
             var navItem = document.getElementById(scroll)
             navItem.scrollIntoView();
         }</script>
-
-    <!-- <script>
-        var $card = $('.card-container').masonry({
-            // set itemSelector so .grid-sizer is not used in layout
-            itemSelector: '.card',
-            // itemSelector: '.main-project-card',
-            // use element for option
-            columnWidth: '.card',
-            percentPosition: true,
-            horizontalPosition: true,
-        })
-
-        $card.imagesLoaded().progress(function () {
-            $card.masonry('layout');
-        });
-    </script> -->
     <script src="assets/javascript/app.js"></script>
 </body>
 
