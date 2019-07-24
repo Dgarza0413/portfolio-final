@@ -19,7 +19,8 @@ img {
 
 h5 {
     /* font-family: 'Ubuntu', sans-serif; */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    /* font-family: 'Montserrat', sans-serif; */
 }
 
 p {
@@ -55,11 +56,13 @@ p {
 
 h1 {
     font-size: 50px;
+    font-family: 'Roboto Slab', serif;
 }
 
 h5 {
-    font-size: 22px;
-    margin-bottom: 1vh;
+    font-size: 26px;
+    font-weight: 600;
+    margin:1vh 0vh;
 }
 
 .fab {
@@ -188,10 +191,11 @@ h5 {
 
 .skills-desc {
     text-align: justify;
+    line-height: 1.5;
 }
 
 .item-skills {
-    margin: 1vw;
+    margin: 2% 5%;
     width: 250px;
     text-align: center;
 }
