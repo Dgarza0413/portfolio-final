@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="topnav" id="navbar">
+    <div class="topnav sticky" id="navbar">
         <ul>
             <li><a onclick="scrollSection('home')">Home</a></li>
             <li><a onclick="scrollSection('contactMe')">Contact Me</a></li>
@@ -32,7 +32,7 @@
     </div>
     <main>
         <section id="home">
-            <div class="flex-box">
+            <div id="topBox" class="flex-box">
                 <div class="flex-row">
                     <div class="flex-column">
                         <h1>David Garza</h1>
@@ -41,7 +41,16 @@
                         <p>Hi. I am a multidisplinary and aspiring web developer that would like to offer a proficient
                             skillset
                             to
-                            the table.</p>
+                            the table.
+                            contact me at <span>dgarza0413@gmail.com</span> </p>
+                        <div>
+                            <a target="_blank" href="https://github.com/Dgarza0413"><i
+                                    class="fab fa-github fa-3x"></i></a>
+                            <a target="_blank" href="https://stackoverflow.com/users/11360627/david-garza"><i
+                                    class="fab fa-stack-overflow fa-3x"></i></a>
+                            <a target="_blank" href="https://www.codewars.com/users/dgarza0413"><i
+                                    class="fas fa-fan fa-3x"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,61 +143,43 @@
             <div class="list">
                 <div class="item-skills">
                     <i class="fab fa-gripfire fa-4x"></i>
-                    <h5>Firebase</h5>
-                    <p class="skills-desc">Use of firebase that is a google nosql <span>database</span> that can host,
-                        call realtime data, and
-                        provide authentication for user experience
+                    <h5>Browser Skills set</h5>
+                    <p class="skills-desc">proficient in HTML, CSS, Javascript, jQuery, and frameworks such as Bootstrap
                     </p>
                 </div>
                 <div class="item-skills">
-                    <i class="fab fa-envira fa-4x"></i>
-                    <h5>NoSql</h5>
-                    <p class="skills-desc">Familiarity with mongodb and mongoose applications look at my
-                        <span>yelpcamp</span> and <span>vueshare</span> for reference</p>
+                    <i class="fab fa-gripfire fa-4x"></i>
+                    <h5>Api Interactions</h5>
+                    <p class="skills-desc">APIs creation, JSON rendering, AJAX calls and methods, Real Time cloud
+                        storage through firebase
+                    </p>
                 </div>
                 <div class="item-skills">
-                    <i class="fas fa-database fa-4x"></i>
-                    <h5>mySQL</h5>
-                    <p class="skills-desc">Knowledge and proficient with mySQL and its language check out my
-                        <span>Bamazon</span>, <span>remainder check</span> for
-                        reference</p>
+                    <i class="fab fa-gripfire fa-4x"></i>
+                    <h5>Powerful Javascript libraries/frameworks</h5>
+                    <p class="skills-desc">Experience with Vue.js & training with React.js
+                    </p>
                 </div>
                 <div class="item-skills">
-                    <i class="fab fa-js fa-4x"></i>
-                    <h5>Javascript/jquery</h5>
-                    <p class="skills-desc">Understanding of javascript, Object-oriented programming, and ES6 features
-                        for shorter and more powerful code</p>
+                    <i class="fab fa-gripfire fa-4x"></i>
+                    <h5>Development Tools</h5>
+                    <p class="skills-desc">Heroku deployments, git, and team projects with github
+                    </p>
                 </div>
                 <div class="item-skills">
-                    <i class="fab fa-html5 fa-4x"></i>
-                    <h5>Html</h5>
-                    <p class="skills-desc">Strong understanding of skeleton structures and readability of basic and
-                        intermidate applications</p>
+                    <i class="fab fa-gripfire fa-4x"></i>
+                    <h5>Database Resources</h5>
+                    <p class="skills-desc">Used NoSQL schema structures with firebase and mongodb, SQL data table
+                        structures with MySQL
+                    </p>
                 </div>
                 <div class="item-skills">
-                    <i class="fab fa-css3-alt fa-4x"></i>
-                    <h5>Css</h5>
-                    <p class="skills-desc">Responsive Css for desktop and mobile applications as well as such
-                        Familiarity with frameworks like sass</p>
-                </div>
-                <div class="item-skills">
-                    <i class="fas fa-stream fa-4x"></i>
-                    <h5>Express</h5>
-                    <p class="skills-desc">Experience with express library and restful routing (GET, POST, PUT, DELETE),
-                        look into the <span>friend
-                            finder</span> as well as <span>heroes united</span> app for examples</p>
-                </div>
-                <div class="item-skills">
-                    <i class="fab fa-node-js fa-4x"></i>
-                    <h5>Node</h5>
-                    <p class="skills-desc">Understanding of the node environment and its cross platform behaviors my
-                        <span>liri</span>, <span>bamazon</span> explore this</p>
-                </div>
-                <div class="item-skills">
-                    <i class="fab fa-git-alt fa-4x"></i>
-                    <h5>Git</h5>
-                    <p class="skills-desc">using of team workflows using git look at <span>Heroes United</span> and
-                        <span>Wooden Spoon</span> for examples</p>
+                    <i class="fab fa-gripfire fa-4x"></i>
+                    <h5>Server Side Tools</h5>
+                    <p class="skills-desc">Templating Engines such as Handlebars and EJS, sessions storage, mocha and
+                        chai testing, node.js platform, express routing practices, MVC, User authentication with
+                        Passport, and ORM/ODM sequalize and mongoose
+                    </p>
                 </div>
             </div>
         </section>
@@ -386,10 +377,50 @@
                         <div class="opacity-background">
                             <div class="text-container" style="flex-direction: column">
                                 <p>
+                                    Using Cheerio, this application demonstrates mongooses capabilities to pull data
+                                    from front end applications and in this case, a news site
                                 </p>
                                 <div class="button-container">
                                     <a href="" target="_blank">Mongo Scraper</a>
                                     <a href="https://github.com/Dgarza0413/reminder-tracker" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/clicky-game-screenshot.png" alt="">
+                    <div class="card-background">
+                        <h3 class="card-title">Clicky Game</h3>
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p>
+                                    A react app that focuses on state, class components, and functional components to
+                                    build a game that tracks randomized squares with a score
+                                </p>
+                                <div class="button-container">
+                                    <a href="" target="_blank">Clicky Game</a>
+                                    <a href="https://github.com/Dgarza0413/clicky-game" target="_blank"><i
+                                            class="fab fa-github fa-2x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/patatap-clone.png" alt="">
+                    <div class="card-background">
+                        <div class="opacity-background">
+                            <div class="text-container" style="flex-direction: column">
+                                <p>
+                                    This application requires the user to press keys to pass in events to randomize
+                                    circles as sounds play. Enjoy
+                                </p>
+                                <div class="button-container">
+                                    <a href="https://frozen-temple-21076.herokuapp.com/" target="_blank">PataTap
+                                        away</a>
+                                    <a href="https://github.com/Dgarza0413/patatap-clone" target="_blank"><i
                                             class="fab fa-github fa-2x"></i></a>
                                 </div>
                             </div>
