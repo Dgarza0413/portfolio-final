@@ -286,9 +286,21 @@ span {
     #home {
         height: 55vh;
     }
+    .card {
+        width: 50vw;
+    }
 }
 
 @media (max-width: 700px) {
-    .section-title { display: none;}
-    .card--width2 { width: 100vw;}
+    .section-title { 
+        display: none;
+    }
+
+    .card--width2 { 
+        width: 100vw;
+        height: 75vh;
+    }
+    .card--width2 > img {
+        height: 75vh;
+    }
 }
