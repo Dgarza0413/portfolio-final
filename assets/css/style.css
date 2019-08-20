@@ -210,17 +210,11 @@ h5 {
     text-align: center;
 }
 
-/* .item-skills:hover {
-    color: black;
-    transition: 0.2s ease-in;
-} */
-
 #home {
     height: 50vh;
     background: whitesmoke;
     margin: 0.5%;
 }
-
 
 /* navbar */
 li {
