@@ -278,7 +278,7 @@ span {
 #topBox {
     height: 50vh;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     box-sizing: border-box;
 }
 
@@ -292,6 +292,9 @@ span {
 }
 
 @media (max-width: 700px) {
+    #home {
+        height: 75vh;
+    }
     .section-title { 
         display: none;
     }
@@ -302,5 +305,19 @@ span {
     }
     .card--width2 > img {
         height: 75vh;
+    }
+
+    .card {
+        width: 100vw;
+    }
+
+    .card > img {
+        height: 75vh;
+    }
+}
+
+@media (max-width: 600px){
+    #home {
+        height: 80vh;
     }
 }
