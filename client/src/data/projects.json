@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Enguage",
+        "description": "Engauge encompasses the MERN stack that records tracks and lists oil and gas well information that is data driven",
+        "webLink": "https://serene-meadow-56536.herokuapp.com/",
+        "gitLink": "https://github.com/Dgarza0413/engauge",
+        "icon": "fa-github",
+        "image": "./assets/images/engauge.png",
+        "category": "primary"
+    },
+    {
+        "title": "Wooden Spoon",
+        "description": "An all in one application recipe forum that can search receipes and retrieve ingredients, steps, and kitchen that will be needed for use within a vast API structure. Technologies utilized within this application are javascript/ajax calls and google firebase for recipe storage",
+        "webLink": "https://still-stream-54250.herokuapp.com/",
+        "gitLink": "https://github.com/Dgarza0413/wooden-spoon",
+        "image": "./assets/images/mockup-wooden-spoon-small.png",
+        "category": "primary"
+    }
+]
