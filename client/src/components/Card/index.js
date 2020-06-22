@@ -2,11 +2,13 @@ import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Button } from './styles';
 
-const Card = () => {
+const Card = ({ title, description, image }) => {
     return (
-        <>
-            This is a card
-        </>
+        <div>
+            <img style={{ borderRadius: '25px', width: "100%" }} src={image} />
+            <div>{title}</div>
+            <div>{description}</div>
+        </div>
     )
 }
 

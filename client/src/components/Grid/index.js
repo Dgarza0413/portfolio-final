@@ -1,23 +1,21 @@
 import React from 'react'
 import { PrimaryGrid, SecondaryGrid } from './styles';
 
+import Card from '../Card';
+
 export default function Grid({ projects }) {
     return (
         <>
             <PrimaryGrid>
                 {projects.map((e, i) => {
+                    console.log(e)
                     return (
-                        <>
+                        <React.Fragment key={e.id}>
                             {e.category === 'primary'
-                                ? <div>
-                                    <img style={{ borderRadius: '25px', width: "100%" }} src={e.image} />
-                                    <div>{e.title}</div>
-                                    <div>{e.description}</div>
-                                </div>
+                                ? <Card {...e} />
                                 : ""
                             }
-
-                        </>
+                        </React.Fragment>
                     )
                 }
                 )}
@@ -25,22 +23,16 @@ export default function Grid({ projects }) {
             <SecondaryGrid>
                 {projects.map((e, i) => {
                     return (
-                        <>
+                        <React.Fragment key={e.id}>
                             {e.category === 'secondary'
-                                ? <div>
-                                    <img style={{ borderRadius: '25px', width: "100%" }} src={e.image} />
-                                    <div>{e.title}</div>
-                                    <div>{e.description}</div>
-                                </div>
+                                ? <Card {...e} />
                                 : ""
                             }
-
-                        </>
+                        </React.Fragment>
                     )
                 }
                 )}
             </SecondaryGrid>
-                }
         </>
     )
 }
