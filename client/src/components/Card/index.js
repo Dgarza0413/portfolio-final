@@ -15,16 +15,27 @@ const Card = ({ title, description, image, id }) => {
                     position: 'absolute',
                     top: '5%',
                     left: '5%',
-                    fontSize: '2rem'
+                    fontSize: '2rem',
+                    fontWeight: '600',
+                    color: 'white'
                 }}
                 >{title}</div>
-                <img style={{
-                    borderRadius: '25px',
-                    width: "100%",
-                    height: "100%"
-                }}
-                    src={image}
-                />
+                {image !== ""
+                    ? <img style={{
+                        borderRadius: '25px',
+                        width: "100%",
+                        height: "100%"
+                    }}
+                        src={image}
+                    />
+                    : <img style={{
+                        borderRadius: '25px',
+                        width: "100%",
+                        height: "100%"
+                    }}
+                        src={'https://via.placeholder.com/900'}
+                    />
+                }
             </div>
         </Link>
     )
