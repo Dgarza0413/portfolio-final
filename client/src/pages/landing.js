@@ -1,12 +1,15 @@
 import React from 'react'
-import projects from '../data/projects.json';
+import data from '../data/projects.js';
 import Title from '../components/Title';
 import Grid from '../components/Grid';
 
-export default function landing() {
+const Landing = () => {
+    console.log(data)
     return (
         <>
-            <Grid projects={projects} />
+            <Grid projects={data} />
         </>
     )
 }
+
+export default Landing
