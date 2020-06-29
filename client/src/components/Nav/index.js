@@ -11,6 +11,10 @@ const Nav = () => {
         {
             route: '/skills',
             name: 'skills'
+        },
+        {
+            route: '/projects',
+            name: 'projects'
         }
     ]
     return (

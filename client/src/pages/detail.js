@@ -11,9 +11,11 @@ const Detail = (props) => {
     return (
         <>
             <div>{findId.title}</div>
-            <Collage />
+            <p>
+                <Link to={'/projects'}>go back</Link>
+            </p>
+            <Collage image={findId.image} />
             {findId.description}
-            <Link to={'/projects'}>go back</Link>
             {findId.technologies.map(e => {
                 return (
                     <div>
@@ -21,6 +23,12 @@ const Detail = (props) => {
                     </div>
                 )
             })}
+            <p>
+                <a href={findId.gitLink}>{findId.gitLink}</a>
+            </p>
+            <p>
+                <a href={findId.webLink}>{findId.webLink}</a>
+            </p>
         </>
     )
 }

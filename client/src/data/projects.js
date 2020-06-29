@@ -95,7 +95,7 @@ const data = [
         technologies: [
             "javascript",
             "sequelize",
-            "mySql",
+            "mysql",
             "nodejs",
             "express"
         ],
@@ -247,7 +247,7 @@ const data = [
             "javascript",
             "html",
             "css",
-            "node",
+            "nodejs",
             "axios",
         ],
         category: "secondary",
@@ -269,7 +269,7 @@ const data = [
             "javascript",
             "html",
             "css",
-            "node",
+            "nodejs",
             "axios",
             "mysql"
         ],
@@ -292,7 +292,7 @@ const data = [
             "javascript",
             "html",
             "css",
-            "node",
+            "nodejs",
             "express",
             "jquery"
         ],

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import skills from '../data/skills';
 import projects from '../data/projects';
+import Nav from '../components/Nav';
 
 export default function Skills() {
     const projectTally = () => {
@@ -8,10 +9,7 @@ export default function Skills() {
         let obj = {}
         for (let i = 0; i < projects.length; i++) {
             for (let j = 0; j < projects[i].technologies.length; j++) {
-                let item = projects[i].technologies[j]
-                if (!item) {
-                    // return obj[projects[i].technologies[j]]
-
+                if (!obj[projects[i].technologies[j]]) {
                     obj[projects[i].technologies[j]] = {
                         count: [1]
                     }
@@ -32,6 +30,7 @@ export default function Skills() {
 
     return (
         <div>
+            <Nav />
             This is skills page
             {skills.map(e => {
                 console.log(e)

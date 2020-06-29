@@ -29,12 +29,9 @@ export default function landing() {
         <Background>
             <LeftSide>a</LeftSide>
             <RightSide>a</RightSide>
-            {/* David Garza */}
-            {/* <p>A like to build things check out my work
             <Link to={'/projects'}>
-                    Projects
+                Projects
             </Link>
-            </p> */}
         </Background>
     )
 }
