@@ -13,7 +13,7 @@ const Detail = (props) => {
             <div>{findId.title}</div>
             <Collage />
             {findId.description}
-            <Link to={'/'}>go back</Link>
+            <Link to={'/projects'}>go back</Link>
             {findId.technologies.map(e => {
                 return (
                     <div>
