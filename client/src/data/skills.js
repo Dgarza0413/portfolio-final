@@ -56,7 +56,7 @@ const data = [
     },
     {
         skill: "git",
-        type: "version control",
+        type: "language",
         set: "development tools"
     },
     {
@@ -85,14 +85,49 @@ const data = [
         set: "server side"
     },
     {
-        skill: "",
-        type: "",
-        set: ""
+        skill: "express",
+        type: "tool",
+        set: "server side"
+    },
+    {
+        skill: "passport",
+        type: "authentication",
+        set: "server side"
+    },
+    {
+        skill: "ORM/ODM",
+        type: "database management",
+        set: "server side"
     },
     {
         skill: "jest",
         type: "testing",
         set: "testing"
+    },
+    {
+        skill: "mongodb",
+        type: "database",
+        set: "database"
+    },
+    {
+        skill: "mysql",
+        type: "database",
+        set: "database"
+    },
+    {
+        skill: "sequelize",
+        type: "database",
+        set: "ORM"
+    },
+    {
+        skill: "mongoose",
+        type: "database",
+        set: "ODM"
+    },
+    {
+        skill: "firebase",
+        type: "database",
+        set: "database"
     },
 ]
 

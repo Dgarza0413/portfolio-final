@@ -35,7 +35,11 @@ const data = [
             "spoonacular"
         ],
         category: "primary",
-        position: "personal"
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
     },
     {
         id: 2,
@@ -53,7 +57,11 @@ const data = [
             "nodejs"
         ],
         category: "primary",
-        position: "personal"
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
     },
     {
         id: 3,
@@ -70,7 +78,11 @@ const data = [
             "graphql"
         ],
         category: "primary",
-        position: "personal"
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
     },
     {
         id: 4,
@@ -88,7 +100,11 @@ const data = [
             "express"
         ],
         category: "primary",
-        position: "personal"
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
     },
     {
         id: 5,
@@ -100,7 +116,11 @@ const data = [
         imageGallery: [],
         technologies: [],
         category: "secondary",
-        position: "personal"
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
     },
     {
         id: 6,
@@ -120,7 +140,11 @@ const data = [
             "semanticui"
         ],
         category: "primary",
-        position: "personal"
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
     },
     {
         id: 7,
@@ -138,7 +162,11 @@ const data = [
             "api"
         ],
         category: "secondary",
-        position: "personal"
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
     },
     {
         id: 10,
@@ -157,8 +185,210 @@ const data = [
             "ajax"
         ],
         category: "secondary",
-        position: "personal"
-    }
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 11,
+        title: "Crystal Collector",
+        description: "Using jquery and html dom updates we have a player guess the answer through selecting a randomized number represented by a crystal. Add the numbers up to reach the answer exactly",
+        webLink: "https://tranquil-wildwood-80006.herokuapp.com/",
+        gitLink: "https://github.com/Dgarza0413/crystal-collector",
+        image: "",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "html",
+            "css",
+            "jquery"
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 12,
+        title: "All Aboard",
+        description: "A train scheduler that incorporates firebase to display arrival and departure data. Additional tech is moment.js for calculating differences in time and display of them",
+        webLink: "https://boiling-hollows-13980.herokuapp.com/",
+        gitLink: "https://github.com/Dgarza0413/all-aboard",
+        image: "",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "html",
+            "css",
+            "jquery",
+            "firebase",
+            "momentjs"
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 13,
+        title: "Liri",
+        description: "Having no website of its own. This project uses backend tech node to pass in information into the CLI and retrieve api information using axios and displaying onto the terminal",
+        webLink: "https://drive.google.com/file/d/16DyM-CzdWtvI3yC0jHLL8RQi6jYihhgB/view",
+        gitLink: "https://github.com/Dgarza0413/liri",
+        image: "",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "html",
+            "css",
+            "node",
+            "axios",
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 14,
+        title: "Bamazon",
+        description: "An example of having no website of its own. This project uses backend tech node to pass in information into the CLI and call and request data from mysql",
+        webLink: "",
+        gitLink: "https://github.com/Dgarza0413/bamazon",
+        image: "",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "html",
+            "css",
+            "node",
+            "axios",
+            "mysql"
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 15,
+        title: "Friend Finder",
+        description: "We will use express to handle client-side requests to respond with a matched person that share calculated scores",
+        webLink: "",
+        gitLink: "https://github.com/Dgarza0413/friend-finder",
+        image: "",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "html",
+            "css",
+            "node",
+            "express",
+            "jquery"
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 16,
+        title: "Task Manager",
+        description: "using the mvc model to map and field our data we create an express and mySQL app to update remove and add tasks onto our webpage.",
+        webLink: "https://serene-island-73007.herokuapp.com/",
+        gitLink: "https://github.com/Dgarza0413/reminder-tracker",
+        image: "",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "css",
+            "node",
+            "express",
+            "jquery",
+            "mysql"
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 17,
+        title: "Mongo Scraper",
+        description: "Using Cheerio, this application demonstrates mongooses capabilities to pull data from front end applications and in this case, a news site",
+        webLink: "https://tranquil-refuge-51439.herokuapp.com/",
+        gitLink: "https://github.com/Dgarza0413/mongo-scraper",
+        image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "css",
+            "node",
+            "express",
+            "mongoose",
+            "mongodb"
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 18,
+        title: "Clicky Game",
+        description: "A react app that focuses on state, class components, and functional components to build a game that tracks randomized squares with a score",
+        webLink: "https://dgarza0413.github.io/clicky-game/",
+        gitLink: "https://github.com/Dgarza0413/clicky-game",
+        image: "",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "css",
+            "react"
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
+    {
+        id: 19,
+        title: "PataTap Clone",
+        description: "This application requires the user to press keys to pass in events to randomize circles as sounds play. Enjoy",
+        webLink: "https://frozen-temple-21076.herokuapp.com/",
+        gitLink: "https://github.com/Dgarza0413/patatap-clone",
+        image: "",
+        imageGallery: [],
+        technologies: [
+            "javascript",
+            "css",
+            "jquery"
+        ],
+        category: "secondary",
+        position: {
+            type: "personal",
+            company: "",
+            title: ""
+        }
+    },
 ]
 
 export default data
