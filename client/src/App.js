@@ -6,6 +6,8 @@ import detail from './pages/detail';
 import landing from './pages/landing';
 import skills from './pages/skills';
 
+import './index.css';
+
 const App = () => {
   return (
     <Router>

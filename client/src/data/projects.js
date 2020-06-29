@@ -90,7 +90,7 @@ const data = [
         description: "A SQL, Express, and Javascript stack application Heroes United is a turn based game vs AI that is complete with user login and character customization",
         webLink: "https://heroesunited.herokuapp.com/",
         gitLink: "https://github.com/elaintran/heroes-united",
-        image: "",
+        image: require("./img/heroesunited.png"),
         imageGallery: [],
         technologies: [
             "javascript",

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 export const Background = styled.div`
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr; 
     height: 100vh;
@@ -21,17 +22,22 @@ export const RightSide = styled.div`
 `
 
 export const Center = styled.div`
-    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 `
 
 export default function landing() {
     return (
         <Background>
-            <LeftSide>a</LeftSide>
-            <RightSide>a</RightSide>
-            <Link to={'/projects'}>
-                Projects
-            </Link>
+            <LeftSide />
+            <RightSide />
+            <Center>
+                <p>I build sites and looking for new ideas</p>
+                <Link to={'/projects'}>Projects</Link>
+            </Center>
         </Background>
     )
 }
