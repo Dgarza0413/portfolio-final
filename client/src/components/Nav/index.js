@@ -15,6 +15,10 @@ const Nav = () => {
         {
             route: '/projects',
             name: 'projects'
+        },
+        {
+            route: '/occupations',
+            name: 'occupations'
         }
     ]
     return (

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+
 import skills from '../data/skills';
 import projects from '../data/projects';
+
 import Nav from '../components/Nav';
 import BarGraph from '../components/Graph/Bar';
 
@@ -9,6 +11,7 @@ export default function Skills() {
 
     const projectTally = () => {
         let obj = []
+        let metrics = []
         for (let i = 0; i < projects.length; i++) {
             for (let j = 0; j < projects[i].technologies.length; j++) {
                 if (!obj[projects[i].technologies[j]]) {
@@ -18,7 +21,6 @@ export default function Skills() {
                 }
             }
         }
-        let metrics = []
         Object.entries(obj).map(e => {
             let item = {
                 name: e[0],
@@ -26,11 +28,25 @@ export default function Skills() {
             }
             metrics.push(item)
         })
-        setData(metrics)
+        // metrics.sort((a, b) => {
+        //     return a.value - b.value;
+        //   });
+        setData(metrics.sort((b, a) => {
+            return a.value - b.value;
+        }))
+    }
+
+    const skillsTally = () => {
+        let obj = []
+        let metrics = []
+        for (let i = 0; i < skills.length; i++) {
+            console.log(skills[i])
+        }
     }
 
     useEffect(() => {
         projectTally()
+        skillsTally()
     }, [])
 
     return (
