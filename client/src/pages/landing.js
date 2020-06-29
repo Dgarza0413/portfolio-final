@@ -1,15 +1,16 @@
-import React from 'react'
-import data from '../data/projects.js';
-import Title from '../components/Title';
-import Grid from '../components/Grid';
+import React from 'react';
+import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
-const Landing = () => {
-    console.log(data)
+export default function landing() {
     return (
-        <>
-            <Grid projects={data} />
-        </>
+        <div>
+            David Garza
+            <p>A like to build things check out my work
+            <Link to={'/projects'}>
+                    Projects
+            </Link>
+            </p>
+        </div>
     )
 }
-
-export default Landing
