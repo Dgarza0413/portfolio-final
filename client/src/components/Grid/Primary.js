@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import Card from '../Card';
 import { PrimaryGrid } from './styles';
 const CardLazy = React.lazy(() => import('../Card'))
 const Primary = ({ projects }) => {

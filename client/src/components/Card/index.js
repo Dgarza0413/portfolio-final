@@ -6,7 +6,6 @@ const Card = ({ title, image, id }) => {
     return (
         <Link to={`/project/${id}`}>
             <div style={{
-                // boxShadow: '1em 0 .1em #ddd',
                 position: 'relative',
             }}
             >

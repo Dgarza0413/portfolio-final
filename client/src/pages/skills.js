@@ -19,10 +19,9 @@ export default function Skills() {
     const [data, setData] = useState();
     const [pieData, setPieData] = useState();
 
-    console.log(pieData)
-
     const projectTally = () => {
         let obj = []
+        let obj2 = []
         let metrics = []
         for (let i = 0; i < projects.length; i++) {
             for (let j = 0; j < projects[i].technologies.length; j++) {
@@ -42,7 +41,6 @@ export default function Skills() {
             metrics.push(item)
         })
 
-        let obj2 = []
         for (let i = 0; i < metrics.length; i++) {
             for (let j = 0; j < skills.length; j++) {
                 if (skills[j].skill === metrics[i].name) {
@@ -55,8 +53,8 @@ export default function Skills() {
                 }
             }
         }
-        setPieData(obj2)
 
+        setPieData(obj2)
         setData(metrics.sort((b, a) => {
             return a.value - b.value;
         }))
@@ -73,7 +71,6 @@ export default function Skills() {
             <GraphStyle>
                 <BarGraph data={data} />
             </GraphStyle>
-
             <GraphStyle>
                 <PieGraph data={pieData} />
             </GraphStyle>

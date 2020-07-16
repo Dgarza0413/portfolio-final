@@ -12,11 +12,18 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 
-// app.get("/api/github", (req, res) => {
-//     axios.get("https://api.github.com/users/dgarza0413")
-//         .then(res => res.data)
-//         .catch(err => console.error(err))
-// })
+
+app.get("/api/github", (req, res) => {
+    // :repo/git/trees/:tree_sha
+    axios.get("https://api.github.com/users/dgarza0413", {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+    )
+        .then(res => res.data)
+        .catch(err => console.error(err))
+})
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, "../client/public/index.html"));

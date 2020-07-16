@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import styled from '@emotion/styled';
+
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import data from '../data/projects';
@@ -6,6 +8,11 @@ import data from '../data/projects';
 import Collage from '../components/Collage';
 import Title from '../components/Title';
 import Chip from '../components/Chip';
+
+export const FlexGrid = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
 
 const Detail = (props) => {
     const matchId = props.match.params.id
@@ -31,9 +38,11 @@ const Detail = (props) => {
             <p>
                 {findId.description}
             </p>
-            {findId.technologies.map(e => {
-                return <Chip text={e} />
-            })}
+            <FlexGrid>
+                {findId.technologies.map(e => {
+                    return <Chip text={e} />
+                })}
+            </FlexGrid>
             <p>
                 <a href={findId.gitLink}>{findId.gitLink}</a>
             </p>
