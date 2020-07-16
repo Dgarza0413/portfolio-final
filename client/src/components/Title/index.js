@@ -1,32 +1,21 @@
-import React, { useState } from 'react'
-import { useTrail, animated } from 'react-spring'
+import React from 'react'
+import styled from '@emotion/styled';
 
-const items = ['Lorem', 'ipsum', 'dolor', 'sit']
-const config = { mass: 5, tension: 2000, friction: 200 }
+export const Header = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45vh;
+    width: 100%;
+    border-radius-right: 20%;
+    border-radius-left: 30%;
+    background-color: skyblue;
+    border-radius: 0 0 20% 40%;
+    z-index: -1;
+`
 
 const Title = () => {
-    const [toggle, set] = useState(true)
-    const trail = useTrail(items.length, {
-        config,
-        opacity: toggle ? 1 : 0,
-        x: toggle ? 0 : 20,
-        height: toggle ? 80 : 0,
-        from: { opacity: 0, x: 20, height: 0 },
-    })
-
-    return (
-        <div onClick={() => set(state => !state)}>
-            <div>
-                {trail.map(({ x, height, ...rest }, index) => (
-                    <animated.div
-                        key={items[index]}
-                        style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}px,0)`) }}>
-                        <animated.div style={{ height }}>{items[index]}</animated.div>
-                    </animated.div>
-                ))}
-            </div>
-        </div>
-    )
+    return <Header />
 }
 
 export default Title

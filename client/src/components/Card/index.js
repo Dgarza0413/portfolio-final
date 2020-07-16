@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 
@@ -6,6 +6,7 @@ const Card = ({ title, image, id }) => {
     return (
         <Link to={`/project/${id}`}>
             <div style={{
+                // boxShadow: '1em 0 .1em #ddd',
                 position: 'relative',
             }}
             >

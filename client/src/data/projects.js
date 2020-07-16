@@ -11,7 +11,12 @@ const data = [
             "react",
             "mongodb",
             "express",
-            "nodejs"
+            "nodejs",
+            "mongoose",
+            "passport",
+            "bootstrap",
+            "data visual",
+            "momentjs"
         ],
         category: "primary",
         position: {
@@ -112,9 +117,9 @@ const data = [
         description: "A react app that places emphasis on hooks to render a grid and create tetrominos to clone a tetris like game",
         webLink: "https://hidden-wildwood-98211.herokuapp.com",
         gitLink: "https://github.com/Dgarza0413/tetris-react",
-        image: "",
+        image: require('./img/tetris.png'),
         imageGallery: [],
-        technologies: [],
+        technologies: ["styled components", "react", "javascript"],
         category: "secondary",
         position: {
             type: "personal",
@@ -152,7 +157,7 @@ const data = [
         description: "Using JavaScript for the logic and jQuery to manipulate HTML and settimers, this project is science trivia where you answer against the clock for more points",
         webLink: "https://agile-citadel-38649.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/trivia-pursuit",
-        image: "",
+        image: require("./img/science-trivia.png"),
         imageGallery: [],
         technologies: [
             "javascript",
@@ -174,7 +179,7 @@ const data = [
         description: "This app makes use of the GIPHY API and ajax calls tomake a dynamic web page that populates with gifs of your choice",
         webLink: "https://afternoon-chamber-25754.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/giftastic",
-        image: "",
+        image: require("./img/giftastic.png"),
         imageGallery: [],
         technologies: [
             "javascript",
@@ -197,7 +202,7 @@ const data = [
         description: "Using jquery and html dom updates we have a player guess the answer through selecting a randomized number represented by a crystal. Add the numbers up to reach the answer exactly",
         webLink: "https://tranquil-wildwood-80006.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/crystal-collector",
-        image: "",
+        image: require("./img/crystal-collector.png"),
         imageGallery: [],
         technologies: [
             "javascript",
@@ -218,7 +223,7 @@ const data = [
         description: "A train scheduler that incorporates firebase to display arrival and departure data. Additional tech is moment.js for calculating differences in time and display of them",
         webLink: "https://boiling-hollows-13980.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/all-aboard",
-        image: "",
+        image: require("./img/all-board.png"),
         imageGallery: [],
         technologies: [
             "javascript",
@@ -241,7 +246,7 @@ const data = [
         description: "Having no website of its own. This project uses backend tech node to pass in information into the CLI and retrieve api information using axios and displaying onto the terminal",
         webLink: "https://drive.google.com/file/d/16DyM-CzdWtvI3yC0jHLL8RQi6jYihhgB/view",
         gitLink: "https://github.com/Dgarza0413/liri",
-        image: "",
+        image: require("./img/liri.png"),
         imageGallery: [],
         technologies: [
             "javascript",
@@ -263,7 +268,7 @@ const data = [
         description: "An example of having no website of its own. This project uses backend tech node to pass in information into the CLI and call and request data from mysql",
         webLink: "",
         gitLink: "https://github.com/Dgarza0413/bamazon",
-        image: "",
+        image: require("./img/bamazonCustomer.png"),
         imageGallery: [],
         technologies: [
             "javascript",
@@ -309,12 +314,12 @@ const data = [
         description: "using the mvc model to map and field our data we create an express and mySQL app to update remove and add tasks onto our webpage.",
         webLink: "https://serene-island-73007.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/reminder-tracker",
-        image: "",
+        image: require("./img/task-manager.png"),
         imageGallery: [],
         technologies: [
             "javascript",
             "css",
-            "node",
+            "nodejs",
             "express",
             "jquery",
             "mysql"
@@ -337,7 +342,7 @@ const data = [
         technologies: [
             "javascript",
             "css",
-            "node",
+            "nodejs",
             "express",
             "mongoose",
             "mongodb"
@@ -355,7 +360,7 @@ const data = [
         description: "A react app that focuses on state, class components, and functional components to build a game that tracks randomized squares with a score",
         webLink: "https://dgarza0413.github.io/clicky-game/",
         gitLink: "https://github.com/Dgarza0413/clicky-game",
-        image: "",
+        image: require('./img/clicky-game.png'),
         imageGallery: [],
         technologies: [
             "javascript",
@@ -375,9 +380,10 @@ const data = [
         description: "This application requires the user to press keys to pass in events to randomize circles as sounds play. Enjoy",
         webLink: "https://frozen-temple-21076.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/patatap-clone",
-        image: "",
+        image: require("./img/patatap-clone.png"),
         imageGallery: [],
         technologies: [
+            "html",
             "javascript",
             "css",
             "jquery"

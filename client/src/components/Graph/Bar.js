@@ -1,9 +1,9 @@
 import React from 'react';
-import { ResponsiveBar } from '@nivo/bar';
+import { ResponsiveBarCanvas } from '@nivo/bar';
 
 const BarGraph = ({ data }) => {
     return (
-        <ResponsiveBar
+        <ResponsiveBarCanvas
             data={data}
             indexBy="name"
             margin={{ top: 50, right: 130, bottom: 50, left: 60 }}

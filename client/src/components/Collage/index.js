@@ -11,7 +11,6 @@ const Collage = ({ image }) => {
                         width: '100%',
                         height: '100%'
                     }}
-                    // src={`https://picsum.photos/500/400?random=${Math.floor(Math.random() * 100)}`} />
                     src={image} />
             </CollagePrimary>
             {arr.map(e => {

@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import styled from '@emotion/styled';
 
 import skills from '../data/skills';
 import projects from '../data/projects';
 
 import Nav from '../components/Nav';
 import BarGraph from '../components/Graph/Bar';
+import PieGraph from '../components/Graph/Pie';
+import Title from '../components/Title';
+
+export const GraphStyle = styled.div`
+    height: 50vh;
+    border-radius: 2%;
+    background-color: #fff;
+`
 
 export default function Skills() {
-    const [data, setData] = useState()
+    const [data, setData] = useState();
+    const [pieData, setPieData] = useState();
+
+    console.log(pieData)
 
     const projectTally = () => {
         let obj = []
@@ -21,6 +33,7 @@ export default function Skills() {
                 }
             }
         }
+
         Object.entries(obj).map(e => {
             let item = {
                 name: e[0],
@@ -28,39 +41,42 @@ export default function Skills() {
             }
             metrics.push(item)
         })
-        // metrics.sort((a, b) => {
-        //     return a.value - b.value;
-        //   });
+
+        let obj2 = []
+        for (let i = 0; i < metrics.length; i++) {
+            for (let j = 0; j < skills.length; j++) {
+                if (skills[j].skill === metrics[i].name) {
+                    obj2.push({
+                        ...skills[j],
+                        ...metrics[i],
+                        id: skills[j].type,
+                        label: skills[j].type
+                    })
+                }
+            }
+        }
+        setPieData(obj2)
+
         setData(metrics.sort((b, a) => {
             return a.value - b.value;
         }))
     }
 
-    const skillsTally = () => {
-        let obj = []
-        let metrics = []
-        for (let i = 0; i < skills.length; i++) {
-            console.log(skills[i])
-        }
-    }
-
     useEffect(() => {
         projectTally()
-        skillsTally()
     }, [])
 
     return (
         <div>
+            <Title />
             <Nav />
-            <div style={{ height: '50vh' }}>
+            <GraphStyle>
                 <BarGraph data={data} />
-            </div>
-            This is skills page
-            {skills.map(e => {
-                return (
-                    <div>{e.skill}</div>
-                )
-            })}
+            </GraphStyle>
+
+            <GraphStyle>
+                <PieGraph data={pieData} />
+            </GraphStyle>
         </div>
     )
 }

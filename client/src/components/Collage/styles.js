@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
 
 export const CollageGrid = styled.div`
-    margin: 0% auto;
     display: grid;
     grid-gap: 0.5rem;
     border-radius: 25px;
     grid-template-columns: auto 20% 20% 20%;
-    grid-template-rows: 250px 250px;
+    grid-template-rows: 225px 225px;
 `
 
 export const CollagePrimary = styled.div`

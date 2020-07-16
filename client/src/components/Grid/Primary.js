@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Card from '../Card';
 import { PrimaryGrid } from './styles';
-
+const CardLazy = React.lazy(() => import('../Card'))
 const Primary = ({ projects }) => {
     return (
         <PrimaryGrid>
@@ -9,7 +9,9 @@ const Primary = ({ projects }) => {
                 return (
                     <React.Fragment key={e.id}>
                         {e.category === 'primary'
-                            ? <Card {...e} />
+                            ? <Suspense fallback={<div>...loading</div>}>
+                                <CardLazy {...e} />
+                            </Suspense>
                             : ""
                         }
                     </React.Fragment>
