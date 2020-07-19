@@ -6,9 +6,8 @@ import occupations from '../data/occupations';
 
 export default function Occupations() {
     return (
-        <div>
+        <>
             <Title />
-            <Nav />
             {occupations.map(e => {
                 return (
                     <>
@@ -17,6 +16,6 @@ export default function Occupations() {
                     </>
                 )
             })}
-        </div>
+        </>
     )
 }

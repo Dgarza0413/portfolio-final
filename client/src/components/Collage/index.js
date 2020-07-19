@@ -9,7 +9,8 @@ const Collage = ({ image }) => {
                 <img
                     style={{
                         width: '100%',
-                        height: '100%'
+                        height: '100%',
+                        borderRadius: '25px'
                     }}
                     src={image} />
             </CollagePrimary>
@@ -20,7 +21,8 @@ const Collage = ({ image }) => {
                             <img
                                 style={{
                                     width: '100%',
-                                    height: '100%'
+                                    height: '100%',
+                                    borderRadius: '25px'
                                 }}
                                 src={`https://picsum.photos/250/200?random=${Math.floor(Math.random() * 100)}`} />
                         }</CollageSecondary>
