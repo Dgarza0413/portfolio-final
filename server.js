@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const axios = require('axios');
@@ -13,16 +14,22 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-app.get("/api/github", (req, res) => {
-    // :repo/git/trees/:tree_sha
-    axios.get("https://api.github.com/users/dgarza0413", {
-        headers: {
-            Authorization: `Bearer ${token}`
-        }
+app.get("/api/github", async (req, res) => {
+    try {
+        const res = await axios.get("https://api.github.com/repos/dgarza0413/engauge/branches/master", {
+            headers: {
+                Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+            }
+        })
+        const tree = await axios.get(`https://api.github.com/repos/dgarza0413/engauge/git/trees/${res.data.commit.sha}`, {
+            headers: {
+                Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+            }
+        })
+        console.log(tree.data.tree)
+    } catch (error) {
+        console.error(error)
     }
-    )
-        .then(res => res.data)
-        .catch(err => console.error(err))
 })
 
 app.use((req, res) => {
