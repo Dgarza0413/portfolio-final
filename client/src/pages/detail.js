@@ -19,7 +19,7 @@ const Detail = (props) => {
     const findId = data.find(e => e.id === parseInt(matchId))
 
     const callGithub = () => {
-        axios.get('https://api.github.com/users/dgarza0413/repos/enguage')
+        axios.get('/api/github')
             .then(res => console.log(res))
             .catch(err => console.error(err))
     }
@@ -27,6 +27,7 @@ const Detail = (props) => {
     useEffect(() => {
         callGithub()
     }, [])
+
     return (
         <>
             <Title />

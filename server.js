@@ -16,17 +16,17 @@ if (process.env.NODE_ENV === "production") {
 
 app.get("/api/github", async (req, res) => {
     try {
-        const res = await axios.get("https://api.github.com/repos/dgarza0413/engauge/branches/master", {
+        const branch = await axios.get("https://api.github.com/repos/dgarza0413/engauge/branches/master", {
             headers: {
                 Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
             }
         })
-        const tree = await axios.get(`https://api.github.com/repos/dgarza0413/engauge/git/trees/${res.data.commit.sha}`, {
+        const tree = await axios.get(`https://api.github.com/repos/dgarza0413/engauge/git/trees/${branch.data.commit.sha}`, {
             headers: {
                 Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
             }
         })
-        console.log(tree.data.tree)
+        await res.json(tree.data)
     } catch (error) {
         console.error(error)
     }
