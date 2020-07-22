@@ -22,6 +22,7 @@ export default function Skills() {
     const projectTally = () => {
         let obj = []
         let obj2 = []
+        let obj3 = []
         let metrics = []
         for (let i = 0; i < projects.length; i++) {
             for (let j = 0; j < projects[i].technologies.length; j++) {
@@ -53,8 +54,22 @@ export default function Skills() {
                 }
             }
         }
-
         setPieData(obj2)
+
+        for (let i = 0; i < skills.length; i++) {
+            const typeSet = skills[i].type
+            if (!obj2[typeSet]) {
+                [obj2[typeSet]] = {
+                    type: typeSet || "",
+                    count: [1]
+                }
+                obj2.push(obj2[typeSet])
+            } else {
+                obj2[typeSet].count.push(1)
+            }
+        }
+        console.log(obj2)
+
         setData(metrics.sort((b, a) => {
             return a.value - b.value;
         }))
@@ -65,15 +80,15 @@ export default function Skills() {
     }, [])
 
     return (
-        <div>
+        <>
             <Title />
-            <Nav />
             <GraphStyle>
                 <BarGraph data={data} />
             </GraphStyle>
             <GraphStyle>
-                <PieGraph data={pieData} />
+                {/* <PieGraph data={pieData} /> */}
+                {/* <PieGraph /> */}
             </GraphStyle>
-        </div>
+        </>
     )
 }

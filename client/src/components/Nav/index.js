@@ -25,11 +25,11 @@ const Nav = () => {
         <Navbar>
             {routes.map(e => {
                 return (
-                    <NavItem>
-                        <Link to={e.route}>
+                    <Link to={e.route}>
+                        <NavItem>
                             {e.name}
-                        </Link>
-                    </NavItem>
+                        </NavItem>
+                    </Link>
                 )
             })}
         </Navbar>
