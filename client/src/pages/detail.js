@@ -31,7 +31,7 @@ const Detail = (props) => {
     return (
         <>
             <Title />
-            <div>{findId.title}</div>
+            <h1>{findId.title}</h1>
             <p>
                 <Link to={'/projects'}>go back</Link>
             </p>

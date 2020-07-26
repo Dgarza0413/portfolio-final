@@ -8,7 +8,7 @@ const Primary = ({ projects }) => {
                 return (
                     <React.Fragment key={e.id}>
                         {e.category === 'primary'
-                            ? <Suspense fallback={<div>...loading</div>}>
+                            ? <Suspense fallback={<img src="https://via.placeholder.com/900" />}>
                                 <CardLazy {...e} />
                             </Suspense>
                             : ""

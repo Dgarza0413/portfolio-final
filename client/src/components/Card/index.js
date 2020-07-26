@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 
 const Card = ({ title, image, id }) => {
