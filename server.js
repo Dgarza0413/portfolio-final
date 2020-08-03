@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const app = express();
 const axios = require('axios');
 const compression = require('compression');
@@ -10,11 +11,12 @@ app.use(express.json());
 app.use(compression())
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+    app.use(express.static(__dirname + "client/build"));
 }
 
 
 app.get("/api/github", async (req, res) => {
+    console.log(req)
     try {
         const branch = await axios.get("https://api.github.com/repos/dgarza0413/engauge/branches/master", {
             headers: {
