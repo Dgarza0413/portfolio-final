@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import art from '../data/img/computer-flat.png';
+
 
 export const Background = styled.div`
     position: relative;
@@ -35,6 +37,8 @@ export default function landing() {
             <LeftSide />
             <RightSide />
             <Center>
+                <h1>David Garza</h1>
+                <img style={{ width: '400px' }} src={art} />
                 <p>I build sites and looking for new ideas</p>
                 <Link to={'/projects'}>Projects</Link>
             </Center>

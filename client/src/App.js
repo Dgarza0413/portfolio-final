@@ -18,7 +18,7 @@ const App = () => {
         <Nav />
         <Switch>
           <Route exact path="/" component={landing} />
-          <div style={{ margin: '0 10%' }}>
+          <div style={{ margin: '5rem 10%' }}>
             <Route exact path="/skills" component={skills} />
             <Route exact path="/occupations" component={occupations} />
             <Route exact path="/projects" component={projects} />

@@ -1,8 +1,7 @@
 import React, { Suspense } from 'react'
-import Card from '../Card';
 import { SecondaryGrid } from './styles.js'
-const CardLazy = React.lazy(() => import('../Card'))
 
+const Card = React.lazy(() => import('../Card'))
 const Secondary = ({ projects }) => {
     return (
         <SecondaryGrid>
@@ -11,7 +10,7 @@ const Secondary = ({ projects }) => {
                     <React.Fragment key={e.id}>
                         {e.category === 'secondary'
                             ? <Suspense fallback={<img src="https://via.placeholder.com/300" />}>
-                                <CardLazy {...e} />
+                                <Card {...e} />
                             </Suspense>
                             : ""
                         }

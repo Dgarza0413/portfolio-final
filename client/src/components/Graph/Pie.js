@@ -1,8 +1,9 @@
 import React from 'react';
 import { ResponsivePieCanvas } from '@nivo/pie'
 
-const MyResponsivePieCanvas = ({ data }) => {
-    console.log(data)
+const MyResponsivePieCanvas = ({ data, state }) => {
+
+
     return (
         <ResponsivePieCanvas
             data={data}
@@ -67,6 +68,7 @@ const MyResponsivePieCanvas = ({ data }) => {
                     symbolShape: 'circle'
                 }
             ]}
+            onClick={function (event) { state(event) }}
         />
     )
 }

@@ -18,16 +18,16 @@ const Detail = (props) => {
     const matchId = props.match.params.id
     const findId = data.find(e => e.id === parseInt(matchId))
 
-console.log(findId)
     const callGithub = () => {
         axios.post('/api/github', findId)
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
 
         // axios.get('/api/github')
         //     .then(res => res.data.tree.forEach(element => {
         //         if(element.type === 'tree'){
-        //             console.log('this is a tree repo perform another call')
+        //              axios.get('/api/github').then(res => res.data.tree)
+        //              console.log('this is a tree repo perform another call')
         //         }
         //         console.log(element)
         //     })

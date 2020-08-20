@@ -51,7 +51,7 @@ const data = [
     },
     {
         skill: "react",
-        type: "framework",
+        type: "library",
         set: "browser",
     },
     {
@@ -77,6 +77,13 @@ const data = [
     },
     {
         skill: "github",
+        type: "version control",
+        set: "development tools",
+        primary: '#000000',
+        secondary: '#FFFFFF'
+    },
+    {
+        skill: "gitlab",
         type: "version control",
         set: "development tools",
         primary: '#000000',
@@ -147,13 +154,18 @@ const data = [
         set: "database"
     },
     {
+        skill: "sql",
+        type: "language",
+        set: "database"
+    },
+    {
         skill: "sequelize",
-        type: "database",
+        type: "ORM",
         set: "ORM"
     },
     {
         skill: "mongoose",
-        type: "database",
+        type: "ODM",
         set: "ODM"
     },
     {

@@ -6,6 +6,10 @@ const axios = require('axios');
 const compression = require('compression');
 const PORT = process.env.PORT || 3001;
 
+const occupations = require('./data/occupations');
+const projects = require('./data/projects');
+const skills = require('./data/skills');
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(compression())
@@ -33,6 +37,12 @@ app.get("/api/github", async (req, res) => {
         console.error(error)
     }
 })
+
+app.get('/api/project/:id', async (req, res) => {
+    return res.json(occupations)
+})
+
+
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, "../client/public/index.html"));
