@@ -18,6 +18,8 @@ const Detail = (props) => {
     const matchId = props.match.params.id
     const findId = data.find(e => e.id === parseInt(matchId))
 
+    console.log(findId)
+
     const callGithub = () => {
         axios.post('/api/github', findId)
             .then(res => console.log(res))
@@ -46,7 +48,7 @@ const Detail = (props) => {
             <p>
                 <Link to={'/projects'}>go back</Link>
             </p>
-            <Collage image={findId.image} />
+            <Collage image={findId.image} imageGallery={findId.imageGallery} />
             <p>
                 {findId.description}
             </p>

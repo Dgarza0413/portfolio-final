@@ -9,8 +9,12 @@ const Primary = ({ projects }) => {
                 return (
                     <React.Fragment key={e.id}>
                         {e.category === 'primary'
-                            ? <Suspense fallback={<img src="https://via.placeholder.com/900" />}>
-                                <Card {...e} />
+                            ? <Suspense fallback={
+                                <div style={{ height: '700px', width: '700px' }}>
+
+                                </div>
+                            }>
+                                <Card {...e} size="primary" />
                             </Suspense>
                             : ""
                         }

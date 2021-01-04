@@ -20,7 +20,7 @@ const App = () => {
           <Route exact path="/" component={landing} />
           <div style={{ margin: '5rem 10%' }}>
             <Route exact path="/skills" component={skills} />
-            <Route exact path="/occupations" component={occupations} />
+            {/* <Route exact path="/occupations" component={occupations} /> */}
             <Route exact path="/projects" component={projects} />
             <Route exact path="/project/:id" component={detail} />
           </div>

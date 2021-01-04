@@ -5,7 +5,7 @@ export const Navbar = styled.nav`
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: black;
+    background-color: #383B53;
     color: white;
 `
 export const NavItem = styled.div`

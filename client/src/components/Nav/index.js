@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, NavItem } from './styles';
+
+import './styles.css';
 
 const Nav = () => {
     const routes = [
@@ -16,23 +18,26 @@ const Nav = () => {
             route: '/projects',
             name: 'projects'
         },
-        {
-            route: '/occupations',
-            name: 'occupations'
-        }
+        // {
+        //     route: '/occupations',
+        //     name: 'occupations'
+        // }
     ]
     return (
-        <Navbar>
+        <nav className="nav-bar">
+            <div className="nav-title">David Garza</div>
             {routes.map(e => {
                 return (
-                    <Link to={e.route}>
-                        <NavItem>
-                            {e.name}
-                        </NavItem>
-                    </Link>
+                    <div className="nav-group">
+                        <Link to={e.route}>
+                            <div className="nav-item">
+                                {e.name}
+                            </div>
+                        </Link>
+                    </div>
                 )
             })}
-        </Navbar>
+        </nav>
     )
 }
 

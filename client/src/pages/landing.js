@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import art from '../data/img/computer-flat.png';
 
-
 export const Background = styled.div`
     position: relative;
     display: grid;
@@ -18,7 +17,8 @@ export const LeftSide = styled.div`
 `
 
 export const RightSide = styled.div`
-    background-color: grey;
+    // background-color: grey;
+    background-color: #383B53;
     grid-column-start: 2;
     height: 100vh;
 `
@@ -37,10 +37,10 @@ export default function landing() {
             <LeftSide />
             <RightSide />
             <Center>
-                <h1>David Garza</h1>
+                <h1 style={{ color: 'white', fontSize: '48px' }}>David Garza</h1>
                 <img style={{ width: '400px' }} src={art} />
-                <p>I build sites and looking for new ideas</p>
-                <Link to={'/projects'}>Projects</Link>
+                <p style={{ color: 'white', fontSize: '30px' }}>I build sites and look for new ideas</p>
+                <Link to={'/projects'} style={{ color: 'white' }}>Enter Projects</Link>
             </Center>
         </Background>
     )

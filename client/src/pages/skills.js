@@ -10,10 +10,35 @@ import Title from '../components/Title';
 
 import Chip from '../components/Chip';
 
+import { Wrapper } from '../components/Wrapper/styles';
+
+import './styles.css';
+
 export const GraphStyle = styled.div`
+    position: relative;
     height: 50vh;
-    border-radius: 2%;
+    padding: 6%;
+    border-radius: 25px;
     background-color: #fff;
+    box-shadow: 2px 2px 8px 2px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+`
+
+export const PrimaryGrid = styled.div`
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    grid-gap: 1rem;
+
+    @media (max-width:750px){
+        grid-template-columns: 1fr;
+    }
+`
+
+export const SecondaryGrid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 1rem;
 `
 
 export default function Skills() {
@@ -82,7 +107,6 @@ export default function Skills() {
 
     useEffect(() => {
         projectTally()
-        handleReset()
     }, [])
 
     useEffect(() => {
@@ -92,32 +116,43 @@ export default function Skills() {
     return (
         <>
             <Title />
-            <h1>What have I used in the past and how often?</h1>
-            <p>every project requires tools to complete, here is a graph of what I use more often</p>
-            <GraphStyle>
-                <BarGraph data={data} />
-            </GraphStyle>
-            <h1>Diversity of Technologies</h1>
-            <p>How you can break up the types of techologies I have experienced</p>
-            <GraphStyle>
-                <PieGraph
-                    data={pieData}
-                    state={setState}
-                />
-            </GraphStyle>
-            <button onClick={handleReset}>reset</button>
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                {items.length > 0
-                    ? items.map(e => {
-                        if (e.type) {
-                            return <Chip text={e.skill} />
-                        } else {
-                            return
-                        }
-                    })
-                    : ""
-                }
-            </div>
+            <PrimaryGrid>
+                <GraphStyle>
+                    <h1>Aggregate of Tech</h1>
+                    <p style={{ margin: 0 }}>what I use more often</p>
+                    <BarGraph data={data} />
+                </GraphStyle>
+                <GraphStyle>
+                    <h1 style={{ margin: 0 }}>Diversity of Tech</h1>
+                    <p style={{ margin: 0 }}>what I have experience in</p>
+                    <PieGraph
+                        data={pieData}
+                        state={setState}
+                    />
+                </GraphStyle>
+            </PrimaryGrid>
+            <Wrapper>
+                <h1>Skills</h1>
+                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                    {items.length > 0
+                        ? items.map(e => {
+                            if (e.type) {
+                                return <Chip text={e.skill} />
+                            } else {
+                                return
+                            }
+                        })
+                        : skills.map(e => {
+                            if (e.type) {
+                                return <Chip text={e.skill} />
+                            } else {
+                                return
+                            }
+                        })
+                    }
+                </div>
+                <button className="button-reset" onClick={handleReset}>reset</button>
+            </Wrapper>
         </>
     )
 }

@@ -8,7 +8,12 @@ export const PrimaryGrid = styled.div`
 
 export const SecondaryGrid = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width:501px){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 500px){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     grid-gap: 1rem;
     margin-top: 1rem;
 `

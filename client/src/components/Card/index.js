@@ -1,38 +1,17 @@
 import React, { Suspense } from 'react';
 import { Link } from 'react-router-dom';
+import './styles.css';
 
-const Card = ({ title, image, id }) => {
+const Card = ({ title, image, id, description, size }) => {
     return (
-        <Link to={`/project/${id}`}>
-            <div style={{
-                position: 'relative',
-            }}
-            >
-                <div style={{
-                    position: 'absolute',
-                    top: '5%',
-                    left: '5%',
-                    fontSize: '2rem',
-                    fontWeight: '600',
-                    color: 'white'
-                }}
-                >{title}</div>
+        <Link to={`/project/${id}`}  >
+            <div className="card-container">
+                <div className="card-title">{title}</div>
                 {image !== ""
-                    ? <img style={{
-                        borderRadius: '25px',
-                        width: "100%",
-                        height: "100%"
-                    }}
-                        src={image}
-                    />
-                    : <img style={{
-                        borderRadius: '25px',
-                        width: "100%",
-                        height: "100%"
-                    }}
-                        src={'https://via.placeholder.com/900'}
-                    />
+                    ? <img className="card-image backdrop" src={image} />
+                    : <img className="card-image backdrop" src={'https://via.placeholder.com/500'} />
                 }
+                <div className={`card-text ${size}`}>{description}</div>
             </div>
         </Link>
     )

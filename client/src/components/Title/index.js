@@ -9,7 +9,7 @@ export const Header = styled.div`
     width: 100%;
     border-radius-right: 20%;
     border-radius-left: 30%;
-    background-color: skyblue;
+    background-color: #87CEEB;
     border-radius: 0 0 20% 40%;
     z-index: -1;
 `

@@ -3,11 +3,11 @@ import { ResponsivePieCanvas } from '@nivo/pie'
 
 const MyResponsivePieCanvas = ({ data, state }) => {
 
-
     return (
         <ResponsivePieCanvas
             data={data}
-            margin={{ top: 40, right: 200, bottom: 40, left: 80 }}
+            // margin={{ top: 40, right: 200, bottom: 40, left: 80 }}
+            margin={{ top: 0, right: 80, bottom: 40, left: 80 }}
             pixelRatio={2}
             innerRadius={0.5}
             padAngle={0.7}
@@ -56,18 +56,18 @@ const MyResponsivePieCanvas = ({ data, state }) => {
                 }
 
             ]}
-            legends={[
-                {
-                    anchor: 'right',
-                    direction: 'column',
-                    translateX: 140,
-                    itemWidth: 60,
-                    itemHeight: 14,
-                    itemsSpacing: 2,
-                    symbolSize: 14,
-                    symbolShape: 'circle'
-                }
-            ]}
+            // legends={[
+            //     {
+            //         anchor: 'right',
+            //         direction: 'column',
+            //         translateX: 140,
+            //         itemWidth: 60,
+            //         itemHeight: 14,
+            //         itemsSpacing: 2,
+            //         symbolSize: 14,
+            //         symbolShape: 'circle'
+            //     }
+            // ]}
             onClick={function (event) { state(event) }}
         />
     )

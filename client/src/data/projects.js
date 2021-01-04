@@ -1,7 +1,7 @@
 const data = [
     {
         id: 0,
-        title: "Enguage",
+        title: "Engauge",
         description: "Engauge encompasses the MERN stack that records tracks and lists oil and gas well information that is data driven",
         webLink: "https://serene-meadow-56536.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/engauge",
@@ -50,10 +50,15 @@ const data = [
         id: 2,
         title: "YelpCamp",
         description: "Yelpcamp is a campgrounds forum that utilizes a full-stack of mongodb, express, and node to control the flow of authentication of users and campgrounds that users can post and manage",
-        webLink: "https://whispering-everglades-98644.herokuapp.com/",
+        webLink: "https://yelpcampdestination.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/yelp-camp",
-        image: "https://images.unsplash.com/photo-1485809052957-5113b0ff51af?ixlib=rb-1.2.1&auto=format&fit=crop&w=3033&q=80",
-        imageGallery: [],
+        image: "https://res.cloudinary.com/davidgarza/image/upload/v1608666336/portfolio/yelpcamp-front_kxo7zv.png",
+        imageGallery: [
+            "https://res.cloudinary.com/davidgarza/image/upload/v1608664302/portfolio/yelpcamp-0_fv2dwl.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1608664301/portfolio/yelpcamp-1_s67qth.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1608664300/portfolio/yelpcamp-2_smqwxo.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1608664452/portfolio/yelpcamp-3_ue9wb9.png"
+        ],
         technologies: [
             "javascript",
             "jquery",
@@ -70,12 +75,16 @@ const data = [
     },
     {
         id: 3,
-        title: "vueShare",
+        title: "Vue Share",
         description: "A photography sharing forum app that applies use of apollo server 2 and apollo boast, writing queries with graphql language and client and server side and using vue and vuex for functionality",
         webLink: "https://vue-share-ogni3dm4u.now.sh/",
         gitLink: "https://github.com/Dgarza0413/vue-share",
-        image: "https://images.unsplash.com/photo-1547679904-ac76451d1594?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-        imageGallery: [],
+        image: "https://res.cloudinary.com/davidgarza/image/upload/v1608671110/portfolio/vueshare-front_wgatr7.png",
+        imageGallery: [
+            "https://res.cloudinary.com/davidgarza/image/upload/v1609095738/portfolio/vueshare-1_wjtavv.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1609095740/portfolio/vueshare-2_frmbfl.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1609095741/portfolio/vueshare-0_juj7fi.png"
+        ],
         technologies: [
             "javascript",
             "vue",
@@ -129,12 +138,18 @@ const data = [
     },
     {
         id: 6,
-        title: "react reserve",
+        title: "Atsy",
         description: "A mern stack e-commerce application that allows user authentication and payment processes.",
-        webLink: "",
-        gitLink: "",
-        image: "",
-        imageGallery: [],
+        webLink: "https://atsy.herokuapp.com",
+        gitLink: "https://github.com/Dgarza0413/atsy",
+        image: "https://res.cloudinary.com/davidgarza/image/upload/v1608681488/portfolio/atsy-front_nd70x6.png",
+        imageGallery: [
+            "https://res.cloudinary.com/davidgarza/image/upload/v1609183218/portfolio/atsy-0_zdfzcn.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1609183217/portfolio/atsy-1_wzvb8l.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1609183217/portfolio/atsy-2_wsmbuh.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1609183217/portfolio/atsy-3_acppbk.png",
+            "https://res.cloudinary.com/davidgarza/image/upload/v1609183217/portfolio/atsy-4_r5jtnd.png"
+        ],
         technologies: [
             "mongodb",
             "express",
@@ -177,7 +192,7 @@ const data = [
         id: 10,
         title: "Giftastic",
         description: "This app makes use of the GIPHY API and ajax calls tomake a dynamic web page that populates with gifs of your choice",
-        webLink: "https://afternoon-chamber-25754.herokuapp.com/",
+        webLink: "https://giftasticapp.herokuapp.com/",
         gitLink: "https://github.com/Dgarza0413/giftastic",
         image: require("./img/giftastic.png"),
         imageGallery: [],
@@ -285,29 +300,29 @@ const data = [
             title: ""
         }
     },
-    {
-        id: 15,
-        title: "Friend Finder",
-        description: "We will use express to handle client-side requests to respond with a matched person that share calculated scores",
-        webLink: "",
-        gitLink: "https://github.com/Dgarza0413/friend-finder",
-        image: "",
-        imageGallery: [],
-        technologies: [
-            "javascript",
-            "html",
-            "css",
-            "nodejs",
-            "express",
-            "jquery"
-        ],
-        category: "secondary",
-        position: {
-            type: "personal",
-            company: "",
-            title: ""
-        }
-    },
+    // {
+    //     id: 15,
+    //     title: "Friend Finder",
+    //     description: "We will use express to handle client-side requests to respond with a matched person that share calculated scores",
+    //     webLink: "",
+    //     gitLink: "https://github.com/Dgarza0413/friend-finder",
+    //     image: "",
+    //     imageGallery: [],
+    //     technologies: [
+    //         "javascript",
+    //         "html",
+    //         "css",
+    //         "nodejs",
+    //         "express",
+    //         "jquery"
+    //     ],
+    //     category: "secondary",
+    //     position: {
+    //         type: "personal",
+    //         company: "",
+    //         title: ""
+    //     }
+    // },
     {
         id: 16,
         title: "Task Manager",

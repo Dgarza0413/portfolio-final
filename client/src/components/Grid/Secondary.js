@@ -5,12 +5,12 @@ const Card = React.lazy(() => import('../Card'))
 const Secondary = ({ projects }) => {
     return (
         <SecondaryGrid>
-            {projects.map((e, i) => {
+            {projects.map((e) => {
                 return (
                     <React.Fragment key={e.id}>
                         {e.category === 'secondary'
-                            ? <Suspense fallback={<img src="https://via.placeholder.com/300" />}>
-                                <Card {...e} />
+                            ? <Suspense fallback={<div style={{ height: '300px', width: '300px' }}></div>}>
+                                <Card {...e} size="secondary" />
                             </Suspense>
                             : ""
                         }
