@@ -1,24 +1,48 @@
 {
-  "name": "portfolio-final",
-  "version": "1.0.0",
-  "main": "server.js",
-  "repository": "git@github.com:Dgarza0413/portfolio-final.git",
-  "author": "David Garza <dgarza0413@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "client": "cd client && yarn start",
-    "server": "node server.js",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
-  },
+  "name": "client",
+  "version": "0.1.0",
+  "proxy": "http://localhost:3001",
+  "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@nivo/bar": "^0.62.0",
+    "@nivo/pie": "^0.62.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
-    "compression": "^1.7.4",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-select": "^3.1.0",
+    "react-spring": "^8.0.27",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^5.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "babel-plugin-emotion": "^10.0.33"
   }
 }

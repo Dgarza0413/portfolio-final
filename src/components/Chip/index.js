@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import utils from '../Utils/';
+import utils from '../Utils';
 
 export const Chips = styled.span`
     border-radius: 25px;
